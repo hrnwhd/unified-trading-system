@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "system_name": "Unified Trading System",
+    "version": "1.0",
+    "created": "2025-07-30T10:00:00"
+  },
+  "last_updated": "2025-07-30T10:00:00",
+  "system_status": "initializing",
+  "data_freshness": {
+    "economic_calendar": {
+      "fresh": false,
+      "last_update": null
+    },
+    "sentiment": {
+      "fresh": false,
+      "last_update": null
+    },
+    "correlation": {
+      "fresh": false,
+      "last_update": null
+    },
+    "cot": {
+      "fresh": false,
+      "last_update": null
+    }
+  },
+  "data_sources": {
+    "economic_calendar": {
+      "status": "waiting",
+      "events": []
+    },
+    "sentiment": {
+      "status": "waiting",
+      "pairs": {}
+    },
+    "correlation": {
+      "status": "waiting",
+      "matrix": {}
+    },
+    "cot": {
+      "status": "waiting",
+      "financial": {},
+      "commodity": {}
+    }
+  }
+}

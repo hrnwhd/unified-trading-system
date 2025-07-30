@@ -1,0 +1,40 @@
+{
+  "data_collection": {
+    "sentiment": {
+      "interval_minutes": 30,
+      "enabled": true,
+      "retry_attempts": 3,
+      "timeout_seconds": 60
+    },
+    "correlation": {
+      "interval_minutes": 30,
+      "enabled": true,
+      "retry_attempts": 3,
+      "timeout_seconds": 60
+    },
+    "economic_calendar": {
+      "interval_minutes": 60,
+      "enabled": true,
+      "retry_attempts": 3,
+      "timeout_seconds": 60
+    },
+    "cot": {
+      "update_day": "friday",
+      "update_time": "18:00",
+      "enabled": true,
+      "historical_weeks": 6,
+      "retry_attempts": 3,
+      "timeout_seconds": 300
+    }
+  },
+  "trading": {
+    "analysis_interval_minutes": 5,
+    "position_check_interval_seconds": 30,
+    "risk_check_interval_seconds": 60
+  },
+  "monitoring": {
+    "emergency_check_interval_seconds": 30,
+    "status_update_interval_minutes": 5,
+    "health_check_interval_minutes": 1
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "monitored_pairs": [
+    "AUDUSD",
+    "USDCAD",
+    "XAUUSD",
+    "EURUSD",
+    "GBPUSD",
+    "AUDCAD",
+    "USDCHF",
+    "GBPCAD",
+    "AUDNZD",
+    "NZDCAD",
+    "US500",
+    "BTCUSD"
+  ],
+  "pair_settings": {
+    "AUDUSD": {
+      "enabled": true,
+      "risk_profile": "Medium",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    },
+    "USDCAD": {
+      "enabled": true,
+      "risk_profile": "Low",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    },
+    "XAUUSD": {
+      "enabled": true,
+      "risk_profile": "High",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    },
+    "EURUSD": {
+      "enabled": true,
+      "risk_profile": "Medium",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    },
+    "GBPUSD": {
+      "enabled": true,
+      "risk_profile": "Medium",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    },
+    "AUDCAD": {
+      "enabled": true,
+      "risk_profile": "Low",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    },
+    "USDCHF": {
+      "enabled": true,
+      "risk_profile": "High",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    },
+    "GBPCAD": {
+      "enabled": true,
+      "risk_profile": "Low",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    },
+    "AUDNZD": {
+      "enabled": true,
+      "risk_profile": "Medium",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    },
+    "NZDCAD": {
+      "enabled": true,
+      "risk_profile": "Low",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    },
+    "US500": {
+      "enabled": true,
+      "risk_profile": "High",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    },
+    "BTCUSD": {
+      "enabled": true,
+      "risk_profile": "Medium",
+      "trading_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trading_hours": {
+        "start": 0,
+        "end": 23
+      }
+    }
+  },
+  "risk_profiles": {
+    "Low": {
+      "adx_threshold": 25,
+      "min_timeframes": 3,
+      "rsi_overbought": 70,
+      "rsi_oversold": 30,
+      "ema_buffer_pct": 0.005,
+      "risk_reward_ratio_long": 1.5,
+      "risk_reward_ratio_short": 1.5,
+      "min_adx_strength": 25,
+      "max_adx_strength": 60,
+      "risk_per_trade_pct": 0.05,
+      "atr_multiplier": 1.5,
+      "min_volatility_pips": 5
+    },
+    "Medium": {
+      "adx_threshold": 25,
+      "min_timeframes": 2,
+      "rsi_overbought": 70,
+      "rsi_oversold": 30,
+      "ema_buffer_pct": 0.005,
+      "risk_reward_ratio_long": 1.3,
+      "risk_reward_ratio_short": 1.3,
+      "min_adx_strength": 25,
+      "max_adx_strength": 60,
+      "risk_per_trade_pct": 0.1,
+      "atr_multiplier": 1.5,
+      "min_volatility_pips": 5
+    },
+    "High": {
+      "adx_threshold": 20,
+      "min_timeframes": 1,
+      "rsi_overbought": 70,
+      "rsi_oversold": 30,
+      "ema_buffer_pct": 0.008,
+      "risk_reward_ratio_long": 1.1,
+      "risk_reward_ratio_short": 1.1,
+      "min_adx_strength": 20,
+      "max_adx_strength": 70,
+      "risk_per_trade_pct": 0.2,
+      "atr_multiplier": 2,
+      "min_volatility_pips": 3
+    }
+  }
+}

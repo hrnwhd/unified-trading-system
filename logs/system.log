@@ -1,0 +1,16 @@
+2025-07-30 23:37:37,646 - __main__ - INFO - 🚀 Initializing Unified Trading System...
+2025-07-30 23:37:37,649 - __main__ - INFO - 📦 Loading core modules...
+2025-07-30 23:37:37,656 - trading - INFO - 🎯 Trading Hub initialized
+2025-07-30 23:37:37,656 - __main__ - INFO - ✅ Trading Hub loaded
+2025-07-30 23:37:37,656 - __main__ - WARNING - ⚠️ Data Manager not found - will be created in Phase 2
+2025-07-30 23:37:39,720 - __main__ - WARNING - ⚠️ Trading Engine not found - will be created in Phase 3
+2025-07-30 23:37:39,728 - __main__ - WARNING - ⚠️ Risk Monitor not found - will be created in Phase 3
+2025-07-30 23:37:39,732 - __main__ - INFO - ✅ System initialization complete
+2025-07-30 23:37:39,732 - __main__ - INFO - 🚀 Starting system components...
+2025-07-30 23:37:39,732 - __main__ - INFO - ✅ All components started
+2025-07-30 23:37:39,732 - __main__ - INFO - 👀 System monitoring started
+2025-07-31 00:39:05,146 - __main__ - INFO - 🚀 Initializing Unified Trading System...
+2025-07-31 00:39:05,146 - __main__ - INFO - 📦 Loading core modules...
+2025-07-31 00:39:05,158 - trading - INFO - 🎯 Trading Hub initialized
+2025-07-31 00:39:05,158 - __main__ - INFO - ✅ Trading Hub loaded
+2025-07-31 00:39:05,161 - __main__ - WARNING - ⚠️ Data Manager not found - will be created in Phase 2

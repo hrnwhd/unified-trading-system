@@ -1,0 +1,67 @@
+{
+  "system": {
+    "name": "Unified Trading System",
+    "version": "1.0",
+    "environment": "production",
+    "debug_mode": false
+  },
+  "mt5": {
+    "account_number": 42903786,
+    "magic_number": 50515253,
+    "server": "MetaTrader5",
+    "timeout": 30
+  },
+  "trading": {
+    "enabled": true,
+    "max_positions_per_pair": 1,
+    "emergency_stop_enabled": true,
+    "risk_management": {
+      "max_drawdown_percent": 50,
+      "max_daily_loss_percent": 10,
+      "max_concurrent_trades": 20
+    }
+  },
+  "martingale": {
+    "enabled": true,
+    "max_layers": 15,
+    "multiplier": 2,
+    "emergency_dd_percentage": 50,
+    "profit_buffer_pips": 5,
+    "min_profit_percentage": 1,
+    "flirt_threshold_pips": 10
+  },
+  "data_collection": {
+    "enabled": true,
+    "sentiment_interval_minutes": 30,
+    "correlation_interval_minutes": 30,
+    "economic_calendar_interval_minutes": 60,
+    "cot_update_day": "friday",
+    "cot_update_time": "18:00",
+    "data_retention_days": 30
+  },
+  "testing": {
+    "reduce_intervals": false,
+    "sentiment_test_interval": 5,
+    "correlation_test_interval": 5,
+    "calendar_test_interval": 10,
+    "dry_run_mode": false
+  },
+  "telegram": {
+    "enabled": false,
+    "bot_token": "",
+    "chat_id": "",
+    "alerts_enabled": true,
+    "status_updates_interval": 300
+  },
+  "web_dashboard": {
+    "enabled": false,
+    "port": 8080,
+    "host": "localhost"
+  },
+  "logging": {
+    "level": "INFO",
+    "max_file_size_mb": 50,
+    "backup_count": 5,
+    "console_output": true
+  }
+}
