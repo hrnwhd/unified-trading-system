@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-# ===== UNIFIED TRADING SYSTEM - MAIN ENTRY POINT =====
-# Single command to start entire trading ecosystem
-# Version: 1.0 - Core Foundation
+# ===== UNIFIED TRADING SYSTEM - SPYDER COMPATIBLE =====
+# Phase 2: Integrated Data Management System - SPYDER IDE COMPATIBLE
+# Version: 1.1 - Data Integration Complete
 
 import os
 import sys
@@ -24,7 +24,7 @@ def setup_logging():
     log_dir = Path("logs")
     log_dir.mkdir(exist_ok=True)
     
-    # Configure main logger
+    # Configure main logger with UTF-8 encoding
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -42,7 +42,7 @@ def setup_logging():
         'risk': logging.getLogger('risk')
     }
     
-    # Add file handlers for specialized logs
+    # Add file handlers for specialized logs with UTF-8 encoding
     for name, logger in loggers.items():
         file_handler = logging.FileHandler(log_dir / f'{name}.log', encoding='utf-8')
         file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
@@ -65,7 +65,7 @@ def create_directory_structure():
     for directory in directories:
         Path(directory).mkdir(exist_ok=True)
     
-    print("✅ Directory structure created")
+    print("Directory structure verified")
 
 # ===== CONFIGURATION LOADER =====
 class ConfigManager:
@@ -89,10 +89,10 @@ class ConfigManager:
             # Load schedules
             self.schedules = self.load_config("schedules.json", self.get_default_schedules())
             
-            print("✅ Configuration loaded successfully")
+            print("Configuration loaded successfully")
             
         except Exception as e:
-            print(f"❌ Error loading configuration: {e}")
+            print(f"Error loading configuration: {e}")
             raise
     
     def load_config(self, filename, default_config):
@@ -101,18 +101,18 @@ class ConfigManager:
         
         if config_path.exists():
             try:
-                with open(config_path, 'r') as f:
+                with open(config_path, 'r', encoding='utf-8') as f:
                     config = json.load(f)
-                print(f"📁 Loaded {filename}")
+                print(f"Loaded {filename}")
                 return config
             except Exception as e:
-                print(f"⚠️ Error loading {filename}, using defaults: {e}")
+                print(f"Error loading {filename}, using defaults: {e}")
                 return default_config
         else:
             # Create default config file
-            with open(config_path, 'w') as f:
+            with open(config_path, 'w', encoding='utf-8') as f:
                 json.dump(default_config, f, indent=2)
-            print(f"📝 Created default {filename}")
+            print(f"Created default {filename}")
             return default_config
     
     def get_default_settings(self):
@@ -120,7 +120,7 @@ class ConfigManager:
         return {
             "system": {
                 "name": "Unified Trading System",
-                "version": "1.0",
+                "version": "1.1",
                 "environment": "production",
                 "debug_mode": False
             },
@@ -395,7 +395,7 @@ class ConfigManager:
     def save_config(self, filename, config):
         """Save configuration to file"""
         config_path = self.config_dir / filename
-        with open(config_path, 'w') as f:
+        with open(config_path, 'w', encoding='utf-8') as f:
             json.dump(config, f, indent=2)
 
 # ===== SYSTEM STATUS MANAGER =====
@@ -469,7 +469,7 @@ class TradingSystemManager:
     def initialize_system(self):
         """Initialize all system components"""
         try:
-            self.logger.info("🚀 Initializing Unified Trading System...")
+            self.logger.info("Starting Unified Trading System...")
             
             # Create directories
             create_directory_structure()
@@ -477,20 +477,20 @@ class TradingSystemManager:
             # Display configuration
             self.display_startup_info()
             
-            # Import core modules (will be created in next phases)
+            # Import core modules
             self.import_modules()
             
-            self.logger.info("✅ System initialization complete")
+            self.logger.info("System initialization complete")
             return True
             
         except Exception as e:
-            self.logger.error(f"❌ System initialization failed: {e}")
+            self.logger.error(f"System initialization failed: {e}")
             return False
     
     def display_startup_info(self):
         """Display system startup information"""
         print("\n" + "="*60)
-        print("🤖 UNIFIED TRADING SYSTEM STARTING")
+        print("UNIFIED TRADING SYSTEM - PHASE 2")
         print("="*60)
         print(f"Version: {self.config.get('system.version')}")
         print(f"Environment: {self.config.get('system.environment')}")
@@ -498,73 +498,75 @@ class TradingSystemManager:
         print(f"Magic Number: {self.config.get('mt5.magic_number')}")
         print(f"Monitored Pairs: {len(self.config.pairs['monitored_pairs'])}")
         print(f"Trading Enabled: {self.config.get('trading.enabled')}")
-        print(f"Martingale Enabled: {self.config.get('martingale.enabled')}")
         print(f"Data Collection Enabled: {self.config.get('data_collection.enabled')}")
+        print(f"Martingale Enabled: {self.config.get('martingale.enabled')}")
         print(f"Telegram Enabled: {self.config.get('telegram.enabled')}")
         print("="*60)
     
     def import_modules(self):
         """Import core system modules"""
         try:
-            # These will be created in subsequent phases
-            # For now, we'll create placeholder imports
+            self.logger.info("Loading core modules...")
             
-            self.logger.info("📦 Loading core modules...")
-            
-            # Try to import modules (will fail gracefully if not yet created)
-            try:
-                from trading_hub import TradingHub
-                self.trading_hub = TradingHub(self.config, self.status, self.loggers)
-                self.logger.info("✅ Trading Hub loaded")
-            except ImportError:
-                self.logger.warning("⚠️ Trading Hub not found - will be created in Phase 2")
-                self.trading_hub = None
-            
+            # Import Data Manager (Phase 2 - Now Available)
             try:
                 from data_manager import DataManager
                 self.data_manager = DataManager(self.config, self.loggers['data'])
-                self.logger.info("✅ Data Manager loaded")
-            except ImportError:
-                self.logger.warning("⚠️ Data Manager not found - will be created in Phase 2")
+                self.logger.info("Data Manager loaded")
+            except ImportError as e:
+                self.logger.error(f"Data Manager not found: {e}")
                 self.data_manager = None
             
+            # Try to import Trading Hub
+            try:
+                from trading_hub import TradingHub
+                self.trading_hub = TradingHub(self.config, self.status, self.loggers)
+                self.logger.info("Trading Hub loaded")
+            except ImportError:
+                self.logger.warning("Trading Hub not found - will be created in Phase 3")
+                self.trading_hub = None
+            
+            # Try to import Trading Engine
             try:
                 from trading_engine import TradingEngine
                 self.trading_engine = TradingEngine(self.config, self.loggers['trading'])
-                self.logger.info("✅ Trading Engine loaded")
+                self.logger.info("Trading Engine loaded")
             except ImportError:
-                self.logger.warning("⚠️ Trading Engine not found - will be created in Phase 3")
+                self.logger.warning("Trading Engine not found - will be created in Phase 3")
                 self.trading_engine = None
             
+            # Try to import Risk Monitor
             try:
                 from risk_monitor import RiskMonitor
                 self.risk_monitor = RiskMonitor(self.config, self.loggers['risk'])
-                self.logger.info("✅ Risk Monitor loaded")
+                self.logger.info("Risk Monitor loaded")
             except ImportError:
-                self.logger.warning("⚠️ Risk Monitor not found - will be created in Phase 3")
+                self.logger.warning("Risk Monitor not found - will be created in Phase 3")
                 self.risk_monitor = None
             
+            # Try to import Telegram Bot
             if self.config.get('telegram.enabled'):
                 try:
                     from telegram_bot import TelegramBot
                     self.telegram_bot = TelegramBot(self.config, self.loggers['telegram'])
-                    self.logger.info("✅ Telegram Bot loaded")
+                    self.logger.info("Telegram Bot loaded")
                 except ImportError:
-                    self.logger.warning("⚠️ Telegram Bot not found - will be created in Phase 4")
+                    self.logger.warning("Telegram Bot not found - will be created in Phase 4")
                     self.telegram_bot = None
             
         except Exception as e:
-            self.logger.error(f"❌ Error importing modules: {e}")
+            self.logger.error(f"Error importing modules: {e}")
     
     def start_system(self):
         """Start all system components"""
         try:
-            self.logger.info("🚀 Starting system components...")
+            self.logger.info("Starting system components...")
             self.running = True
             
-            # Start Data Manager
+            # Start Data Manager (Phase 2 - Priority)
             if self.data_manager:
                 self.start_component('data_manager', self.data_manager.run)
+                time.sleep(2)  # Allow data manager to initialize
             
             # Start Risk Monitor
             if self.risk_monitor:
@@ -579,11 +581,11 @@ class TradingSystemManager:
             if self.telegram_bot:
                 self.start_component('telegram_bot', self.telegram_bot.run)
             
-            self.logger.info("✅ All components started")
+            self.logger.info("All available components started")
             return True
             
         except Exception as e:
-            self.logger.error(f"❌ Error starting system: {e}")
+            self.logger.error(f"Error starting system: {e}")
             return False
     
     def start_component(self, component_name, target_function):
@@ -599,39 +601,43 @@ class TradingSystemManager:
             self.threads[component_name] = thread
             
             self.status.update_component_status(component_name, 'running')
-            self.logger.info(f"🔄 Started {component_name}")
+            self.logger.info(f"Started {component_name}")
             
         except Exception as e:
-            self.logger.error(f"❌ Failed to start {component_name}: {e}")
+            self.logger.error(f"Failed to start {component_name}: {e}")
             self.status.update_component_status(component_name, 'error', str(e))
     
     def component_wrapper(self, component_name, target_function):
         """Wrapper for component execution with error handling"""
         try:
-            self.logger.info(f"🔄 {component_name} thread starting...")
+            self.logger.info(f"{component_name} thread starting...")
             target_function()
             
         except Exception as e:
-            self.logger.error(f"❌ {component_name} crashed: {e}")
+            self.logger.error(f"{component_name} crashed: {e}")
             self.status.update_component_status(component_name, 'error', str(e))
         
         finally:
             self.status.update_component_status(component_name, 'stopped')
-            self.logger.warning(f"🛑 {component_name} thread stopped")
+            self.logger.warning(f"{component_name} thread stopped")
     
     def monitor_system(self):
         """Main system monitoring loop"""
         try:
-            self.logger.info("👀 System monitoring started")
+            self.logger.info("System monitoring started")
             
             while self.running and not self.shutdown_requested:
                 try:
                     # Check component health
                     self.check_component_health()
                     
-                    # Log status periodically
-                    if datetime.now().minute % 5 == 0:  # Every 5 minutes
+                    # Log status periodically (every 5 minutes)
+                    if datetime.now().minute % 5 == 0 and datetime.now().second < 30:
                         self.log_system_status()
+                    
+                    # Enhanced data manager monitoring (Phase 2)
+                    if self.data_manager:
+                        self.monitor_data_manager()
                     
                     # Check for shutdown signal
                     if self.check_shutdown_signal():
@@ -640,31 +646,51 @@ class TradingSystemManager:
                     time.sleep(10)  # Check every 10 seconds
                     
                 except KeyboardInterrupt:
-                    self.logger.info("🛑 Shutdown requested by user")
+                    self.logger.info("Shutdown requested by user")
                     break
                 
                 except Exception as e:
-                    self.logger.error(f"❌ Error in monitoring loop: {e}")
+                    self.logger.error(f"Error in monitoring loop: {e}")
                     time.sleep(5)
             
         except Exception as e:
-            self.logger.error(f"❌ Fatal error in system monitor: {e}")
+            self.logger.error(f"Fatal error in system monitor: {e}")
         
         finally:
             self.shutdown_system()
+    
+    def monitor_data_manager(self):
+        """Enhanced monitoring for data manager (Phase 2)"""
+        try:
+            # Get data manager health every 30 seconds
+            if datetime.now().second % 30 == 0:
+                health = self.data_manager.get_system_health()
+                
+                # Check if any data sources are having issues
+                if health.get('health_score', 0) < 50:
+                    self.logger.warning(f"Data health degraded: {health.get('health_score', 0)}%")
+                
+                # Log fresh vs stale data sources
+                fresh_count = health.get('fresh_sources', 0)
+                total_count = health.get('total_sources', 0)
+                
+                if fresh_count < total_count:
+                    stale_count = total_count - fresh_count
+                    self.logger.info(f"Data Status: {fresh_count}/{total_count} sources fresh ({stale_count} stale)")
+                
+        except Exception as e:
+            self.logger.error(f"Error monitoring data manager: {e}")
     
     def check_component_health(self):
         """Check health of all components"""
         try:
             for component_name, thread in self.threads.items():
                 if not thread.is_alive():
-                    self.logger.warning(f"⚠️ {component_name} thread died")
+                    self.logger.warning(f"{component_name} thread died")
                     self.status.update_component_status(component_name, 'stopped')
                     
-                    # TODO: Add restart logic in future phases
-                    
         except Exception as e:
-            self.logger.error(f"❌ Error checking component health: {e}")
+            self.logger.error(f"Error checking component health: {e}")
     
     def check_shutdown_signal(self):
         """Check for external shutdown signals"""
@@ -672,14 +698,14 @@ class TradingSystemManager:
             # Check for shutdown file
             shutdown_file = Path("data/shutdown_signal.json")
             if shutdown_file.exists():
-                self.logger.info("🛑 Shutdown signal file detected")
+                self.logger.info("Shutdown signal file detected")
                 shutdown_file.unlink()  # Remove the file
                 return True
             
             return False
             
         except Exception as e:
-            self.logger.error(f"❌ Error checking shutdown signal: {e}")
+            self.logger.error(f"Error checking shutdown signal: {e}")
             return False
     
     def log_system_status(self):
@@ -687,55 +713,319 @@ class TradingSystemManager:
         try:
             status_summary = self.status.get_status_summary()
             
-            self.logger.info(f"📊 System Status: {status_summary['system_status'].upper()}")
-            self.logger.info(f"⏰ Uptime: {status_summary['uptime_formatted']}")
+            self.logger.info(f"System Status: {status_summary['system_status'].upper()}")
+            self.logger.info(f"Uptime: {status_summary['uptime_formatted']}")
             
             running_components = [name for name, comp in status_summary['components'].items() 
                                 if comp['status'] == 'running']
             
             if running_components:
-                self.logger.info(f"✅ Running: {', '.join(running_components)}")
+                self.logger.info(f"Running: {', '.join(running_components)}")
             
             failed_components = [name for name, comp in status_summary['components'].items() 
                                if comp['status'] == 'error']
             
             if failed_components:
-                self.logger.warning(f"❌ Failed: {', '.join(failed_components)}")
+                self.logger.warning(f"Failed: {', '.join(failed_components)}")
+            
+            # Enhanced data manager status logging (Phase 2)
+            if self.data_manager:
+                try:
+                    health = self.data_manager.get_system_health()
+                    self.logger.info(f"Data Health: {health.get('health_score', 0)}% ({health.get('fresh_sources', 0)}/{health.get('total_sources', 0)} sources fresh)")
+                except Exception as e:
+                    self.logger.warning(f"Could not get data manager health: {e}")
                 
         except Exception as e:
-            self.logger.error(f"❌ Error logging system status: {e}")
+            self.logger.error(f"Error logging system status: {e}")
     
     def shutdown_system(self):
         """Gracefully shutdown all components"""
         try:
-            self.logger.info("🔄 Shutting down system...")
+            self.logger.info("Shutting down system...")
             self.running = False
             
             # Signal all components to stop
             for component_name in self.threads.keys():
                 self.status.update_component_status(component_name, 'stopping')
             
+            # Request shutdown for data manager (Phase 2)
+            if self.data_manager:
+                try:
+                    self.data_manager.request_shutdown()
+                    self.logger.info("Data Manager shutdown requested")
+                except Exception as e:
+                    self.logger.warning(f"Error requesting data manager shutdown: {e}")
+            
             # Wait for threads to complete (with timeout)
             for component_name, thread in self.threads.items():
                 thread.join(timeout=30)  # 30 second timeout
                 if thread.is_alive():
-                    self.logger.warning(f"⚠️ {component_name} thread did not stop gracefully")
+                    self.logger.warning(f"{component_name} thread did not stop gracefully")
             
-            self.logger.info("✅ System shutdown complete")
+            # Cleanup data manager (Phase 2)
+            if self.data_manager:
+                try:
+                    self.data_manager.cleanup()
+                    self.logger.info("Data Manager cleanup completed")
+                except Exception as e:
+                    self.logger.warning(f"Error cleaning up data manager: {e}")
+            
+            self.logger.info("System shutdown complete")
             
         except Exception as e:
-            self.logger.error(f"❌ Error during shutdown: {e}")
+            self.logger.error(f"Error during shutdown: {e}")
+
+# ===== QUICK TEST FUNCTION FOR SPYDER =====
+def test_system_quick():
+    """Quick test function that can be run in Spyder"""
+    print("="*60)
+    print("QUICK SYSTEM TEST")
+    print("="*60)
+    
+    try:
+        # Test 1: Create system manager
+        print("Test 1: Creating system manager...")
+        system_manager = TradingSystemManager()
+        print("   OK: System manager created")
+        
+        # Test 2: Check data manager
+        if system_manager.data_manager:
+            print("Test 2: Data manager check...")
+            scrapers = list(system_manager.data_manager.scrapers.keys())
+            print(f"   OK: Data manager loaded with {len(scrapers)} scrapers: {scrapers}")
+            
+            # Test 3: Check health
+            health = system_manager.data_manager.get_system_health()
+            print(f"   OK: System health: {health.get('health_score', 0)}%")
+            
+            # Test 4: Test force update
+            print("Test 3: Testing force update...")
+            success = system_manager.data_manager.force_update('economic_calendar')
+            print(f"   Force update result: {'SUCCESS' if success else 'FAILED'}")
+            
+            # Test 5: Check market data file
+            market_data_file = Path("data/market_data.json")
+            if market_data_file.exists():
+                print("Test 4: Market data file check...")
+                with open(market_data_file, 'r', encoding='utf-8') as f:
+                    market_data = json.load(f)
+                
+                system_status = market_data.get('system_status', 'unknown')
+                print(f"   OK: Market data file exists, status: {system_status}")
+                
+                # Show data sources
+                data_sources = market_data.get('data_sources', {})
+                for source_name, source_data in data_sources.items():
+                    status = source_data.get('status', 'unknown')
+                    print(f"   {source_name}: {status}")
+                
+                print("\n" + "="*60)
+                print("TEST RESULTS: SUCCESS")
+                print("="*60)
+                print("System is ready for operation!")
+                print("\nYou can now:")
+                print("1. Run individual data updates")
+                print("2. Start the full system")
+                print("3. Monitor data collection")
+                
+                return True
+            else:
+                print("   ERROR: Market data file not created")
+                return False
+        else:
+            print("   ERROR: Data manager not available")
+            return False
+            
+    except Exception as e:
+        print(f"TEST ERROR: {e}")
+        import traceback
+        traceback.print_exc()
+        return False
+
+# ===== DATA COLLECTION TEST FUNCTIONS =====
+def test_individual_scrapers():
+    """Test each scraper individually"""
+    print("="*60)
+    print("INDIVIDUAL SCRAPER TESTS")
+    print("="*60)
+    
+    try:
+        # Create system manager
+        system_manager = TradingSystemManager()
+        
+        if not system_manager.data_manager:
+            print("ERROR: Data manager not available")
+            return False
+        
+        data_manager = system_manager.data_manager
+        
+        # Test each scraper
+        scrapers_to_test = ['economic_calendar', 'sentiment', 'correlation', 'cot']
+        results = {}
+        
+        for scraper_name in scrapers_to_test:
+            print(f"\nTesting {scraper_name}...")
+            try:
+                success = data_manager.force_update(scraper_name)
+                results[scraper_name] = success
+                print(f"   Result: {'SUCCESS' if success else 'FAILED'}")
+                
+                # Wait a moment between tests
+                time.sleep(2)
+                
+            except Exception as e:
+                results[scraper_name] = False
+                print(f"   ERROR: {e}")
+        
+        # Summary
+        print("\n" + "="*60)
+        print("SCRAPER TEST SUMMARY")
+        print("="*60)
+        
+        successful = sum(1 for result in results.values() if result)
+        total = len(results)
+        
+        for scraper_name, result in results.items():
+            status = "PASS" if result else "FAIL"
+            print(f"{scraper_name}: {status}")
+        
+        print(f"\nOverall: {successful}/{total} scrapers working")
+        
+        if successful > 0:
+            print("\nSome scrapers are working! You can:")
+            print("1. Check data/market_data.json for results")
+            print("2. Run the full system with available scrapers")
+            print("3. Check logs/data.log for detailed information")
+        
+        return successful > 0
+        
+    except Exception as e:
+        print(f"ERROR: {e}")
+        return False
+
+def run_data_collection_test(duration_minutes=5):
+    """Run data collection for a specified duration"""
+    print("="*60)
+    print(f"DATA COLLECTION TEST - {duration_minutes} MINUTES")
+    print("="*60)
+    
+    try:
+        # Create system manager with test intervals
+        system_manager = TradingSystemManager()
+        
+        # Set fast intervals for testing
+        system_manager.config.schedules['data_collection']['sentiment']['interval_minutes'] = 2
+        system_manager.config.schedules['data_collection']['correlation']['interval_minutes'] = 2
+        system_manager.config.schedules['data_collection']['economic_calendar']['interval_minutes'] = 3
+        
+        print("Starting data collection with fast test intervals...")
+        print("   Sentiment: every 2 minutes")
+        print("   Correlation: every 2 minutes") 
+        print("   Economic Calendar: every 3 minutes")
+        print("   COT: weekly (normal schedule)")
+        
+        # Initialize and start system
+        if not system_manager.initialize_system():
+            print("ERROR: System initialization failed")
+            return False
+        
+        if not system_manager.start_system():
+            print("ERROR: System startup failed")
+            return False
+        
+        print(f"\nRunning for {duration_minutes} minutes...")
+        print("Press Ctrl+C to stop early")
+        
+        # Run for specified duration
+        start_time = time.time()
+        end_time = start_time + (duration_minutes * 60)
+        
+        update_count = 0
+        last_status_time = start_time
+        
+        try:
+            while time.time() < end_time:
+                # Show status every 30 seconds
+                if time.time() - last_status_time >= 30:
+                    elapsed = (time.time() - start_time) / 60
+                    remaining = duration_minutes - elapsed
+                    
+                    if system_manager.data_manager:
+                        health = system_manager.data_manager.get_system_health()
+                        health_score = health.get('health_score', 0)
+                        fresh_sources = health.get('fresh_sources', 0)
+                        total_sources = health.get('total_sources', 0)
+                        
+                        print(f"   Status: {elapsed:.1f}/{duration_minutes} min | "
+                              f"Health: {health_score}% | "
+                              f"Fresh: {fresh_sources}/{total_sources}")
+                    
+                    last_status_time = time.time()
+                
+                time.sleep(1)
+                
+        except KeyboardInterrupt:
+            print("\n   Stopped by user")
+        
+        # Final status
+        print("\nFinal Results:")
+        if system_manager.data_manager:
+            health = system_manager.data_manager.get_system_health()
+            market_data = system_manager.data_manager.get_market_data()
+            
+            print(f"   Health Score: {health.get('health_score', 0)}%")
+            
+            # Show data source status
+            data_sources = market_data.get('data_sources', {})
+            for source_name, source_data in data_sources.items():
+                status = source_data.get('status', 'unknown')
+                last_update = source_data.get('last_update', 'never')
+                
+                if last_update != 'never':
+                    try:
+                        update_time = datetime.fromisoformat(last_update)
+                        age_minutes = (datetime.now() - update_time).total_seconds() / 60
+                        age_str = f"{age_minutes:.1f}m ago"
+                    except:
+                        age_str = "unknown age"
+                else:
+                    age_str = "never updated"
+                
+                print(f"   {source_name}: {status} ({age_str})")
+        
+        # Shutdown
+        system_manager.shutdown_system()
+        
+        print("\nData collection test completed!")
+        print("Check the following files for results:")
+        print("   - data/market_data.json (unified data)")
+        print("   - logs/data.log (detailed logs)")
+        print("   - logs/system.log (system logs)")
+        
+        return True
+        
+    except Exception as e:
+        print(f"ERROR: {e}")
+        import traceback
+        traceback.print_exc()
+        return False
 
 # ===== COMMAND LINE INTERFACE =====
 def parse_command_line():
     """Parse command line arguments"""
     import argparse
     
-    parser = argparse.ArgumentParser(description='Unified Trading System')
+    parser = argparse.ArgumentParser(description='Unified Trading System - Phase 2')
     parser.add_argument('--config', help='Configuration file path')
     parser.add_argument('--debug', action='store_true', help='Enable debug mode')
     parser.add_argument('--dry-run', action='store_true', help='Run in simulation mode')
     parser.add_argument('--test-intervals', action='store_true', help='Use reduced intervals for testing')
+    parser.add_argument('--data-only', action='store_true', help='Run data collection only (no trading)')
+    parser.add_argument('--force-update', help='Force update specific data source (calendar|sentiment|correlation|cot|all)')
+    parser.add_argument('--test-quick', action='store_true', help='Run quick system test')
+    parser.add_argument('--test-scrapers', action='store_true', help='Test individual scrapers')
+    parser.add_argument('--test-collection', type=int, metavar='MINUTES', help='Run data collection test for N minutes')
     
     return parser.parse_args()
 
@@ -743,10 +1033,20 @@ def parse_command_line():
 def main():
     """Main entry point"""
     try:
-        print("🚀 Starting Unified Trading System...")
+        print("Starting Unified Trading System - Phase 2...")
         
         # Parse command line arguments
         args = parse_command_line()
+        
+        # Handle test commands first
+        if args.test_quick:
+            return 0 if test_system_quick() else 1
+        
+        if args.test_scrapers:
+            return 0 if test_individual_scrapers() else 1
+        
+        if args.test_collection:
+            return 0 if run_data_collection_test(args.test_collection) else 1
         
         # Initialize system manager
         system_manager = TradingSystemManager()
@@ -762,22 +1062,51 @@ def main():
         
         if args.test_intervals:
             system_manager.config.update('testing.reduce_intervals', True)
+            # Apply reduced intervals to schedules
+            system_manager.config.schedules['data_collection']['sentiment']['interval_minutes'] = 5
+            system_manager.config.schedules['data_collection']['correlation']['interval_minutes'] = 5
+            system_manager.config.schedules['data_collection']['economic_calendar']['interval_minutes'] = 10
+        
+        if args.data_only:
+            system_manager.config.update('trading.enabled', False)
+            print("Data collection only mode enabled")
         
         # Initialize system
         if not system_manager.initialize_system():
-            print("❌ System initialization failed")
+            print("System initialization failed")
             return 1
+        
+        # Handle force update command
+        if args.force_update:
+            if system_manager.data_manager:
+                print(f"Forcing update for: {args.force_update}")
+                source = args.force_update if args.force_update != 'all' else None
+                success = system_manager.data_manager.force_update(source)
+                print(f"Force update {'succeeded' if success else 'failed'}")
+                return 0 if success else 1
+            else:
+                print("Data Manager not available for force update")
+                return 1
         
         # Start all components
         if not system_manager.start_system():
-            print("❌ System startup failed")
+            print("System startup failed")
             return 1
         
-        print("\n✅ System started successfully!")
-        print("📱 Use Ctrl+C to stop the system")
-        print("📊 Check logs/ directory for detailed logs")
-        print("⚙️ Check config/ directory for configuration files")
-        print("📁 Check data/ directory for market data")
+        print("\nSystem started successfully!")
+        print("Use Ctrl+C to stop the system")
+        print("Check logs/ directory for detailed logs")
+        print("Check config/ directory for configuration files")
+        print("Check data/ directory for market data")
+        
+        # Phase 2 specific information
+        if system_manager.data_manager:
+            print("Phase 2: Data Collection System Active")
+            print("   - Economic Calendar: Updates every hour")
+            print("   - Sentiment Analysis: Updates every 30 minutes")
+            print("   - Correlation Data: Updates every 30 minutes")
+            print("   - COT Data: Updates weekly on Friday")
+            print("   - Unified Data: Available in data/market_data.json")
         
         # Run main monitoring loop
         system_manager.monitor_system()
@@ -785,11 +1114,11 @@ def main():
         return 0
         
     except KeyboardInterrupt:
-        print("\n🛑 System stopped by user")
+        print("\nSystem stopped by user")
         return 0
     
     except Exception as e:
-        print(f"\n❌ Fatal system error: {e}")
+        print(f"\nFatal system error: {e}")
         import traceback
         traceback.print_exc()
         return 1

@@ -1,0 +1,239 @@
+2025-07-31 01:02:30,602 - INFO - ✅ Loaded calendar scraper: FixedEconomicCalendarScraper
+2025-07-31 01:02:31,229 - INFO - ✅ Loaded sentiment scraper: SentimentSignalManager
+2025-07-31 01:02:31,244 - INFO - ✅ Loaded correlation scraper: CorrelationSignalManager
+2025-07-31 01:02:31,261 - INFO - ✅ Loaded cot scraper: COTDataManager
+2025-07-31 01:02:31,264 - INFO - ✅ Initialized 4 scrapers
+2025-07-31 01:02:31,267 - INFO - 📅 Calendar updates: every 60 minutes
+2025-07-31 01:02:31,268 - INFO - 😊 Sentiment updates: every 30 minutes
+2025-07-31 01:02:31,269 - INFO - 🔗 Correlation updates: every 30 minutes
+2025-07-31 01:02:31,270 - INFO - 📊 COT updates: friday at 18:00
+2025-07-31 01:02:31,272 - INFO - ✅ Data collection schedules initialized
+2025-07-31 01:02:31,273 - INFO - 🎯 Data Manager initialized
+2025-07-31 01:02:31,301 - INFO - 🚀 Data Manager starting...
+2025-07-31 01:02:31,312 - INFO - 📁 Loaded existing market data file
+2025-07-31 01:02:31,313 - INFO - 🔄 Running initial data collection...
+2025-07-31 01:02:31,314 - INFO - 🔄 Running initial economic_calendar collection...
+2025-07-31 01:02:31,315 - INFO - 🔄 Running initial sentiment collection...
+2025-07-31 01:02:31,316 - INFO - 📅 Updating economic calendar data...
+2025-07-31 01:02:31,317 - INFO - 🔄 Running initial correlation collection...
+2025-07-31 01:02:31,317 - INFO - 😊 Updating sentiment data...
+2025-07-31 01:02:31,318 - INFO - 🔗 Updating correlation data...
+2025-07-31 01:02:34,310 - INFO - ✅ Correlation updated: 71 currencies, 228 warnings
+2025-07-31 01:02:34,331 - INFO - ✅ Initial correlation collection completed
+2025-07-31 01:02:38,839 - INFO - ✅ Calendar updated: 190 events for 3 dates
+2025-07-31 01:02:38,842 - INFO - ✅ Initial economic_calendar collection completed
+2025-07-31 01:02:38,943 - INFO - ✅ Sentiment updated: 72 pairs processed
+2025-07-31 01:02:38,945 - INFO - ✅ Initial sentiment collection completed
+2025-07-31 01:02:38,947 - INFO - ✅ Initial data collection completed
+2025-07-31 01:02:38,949 - INFO - ⏰ Data collection scheduler started
+2025-07-31 01:16:50,929 - INFO - ✅ Loaded calendar scraper: FixedEconomicCalendarScraper
+2025-07-31 01:16:51,332 - INFO - ✅ Loaded sentiment scraper: SentimentSignalManager
+2025-07-31 01:16:51,350 - INFO - ✅ Loaded correlation scraper: CorrelationSignalManager
+2025-07-31 01:16:51,360 - INFO - ✅ Loaded cot scraper: COTDataManager
+2025-07-31 01:16:51,360 - INFO - ✅ Initialized 4 scrapers
+2025-07-31 01:16:51,362 - INFO - 📅 Calendar updates: every 60 minutes
+2025-07-31 01:16:51,362 - INFO - 😊 Sentiment updates: every 30 minutes
+2025-07-31 01:16:51,362 - INFO - 🔗 Correlation updates: every 30 minutes
+2025-07-31 01:16:51,364 - INFO - 📊 COT updates: friday at 18:00
+2025-07-31 01:16:51,364 - INFO - ✅ Data collection schedules initialized
+2025-07-31 01:16:51,364 - INFO - 🎯 Data Manager initialized
+2025-07-31 01:16:53,293 - INFO - 🚀 Data Manager starting...
+2025-07-31 01:16:53,307 - INFO - 📁 Loaded existing market data file
+2025-07-31 01:16:53,307 - INFO - 🔄 Running initial data collection...
+2025-07-31 01:16:53,307 - INFO - 🔄 Running initial economic_calendar collection...
+2025-07-31 01:16:53,307 - INFO - 📅 Updating economic calendar data...
+2025-07-31 01:16:53,307 - INFO - 🔄 Running initial sentiment collection...
+2025-07-31 01:16:53,313 - INFO - 🔄 Running initial correlation collection...
+2025-07-31 01:16:53,313 - INFO - 😊 Updating sentiment data...
+2025-07-31 01:16:53,313 - INFO - 🔗 Updating correlation data...
+2025-07-31 01:16:58,841 - INFO - ✅ Correlation updated: 71 currencies, 228 warnings
+2025-07-31 01:16:58,885 - INFO - ✅ Initial correlation collection completed
+2025-07-31 01:17:01,677 - INFO - ✅ Calendar updated: 190 events for 3 dates
+2025-07-31 01:17:01,686 - INFO - ✅ Initial economic_calendar collection completed
+2025-07-31 01:17:01,841 - INFO - ✅ Sentiment updated: 72 pairs processed
+2025-07-31 01:17:01,841 - INFO - ✅ Initial sentiment collection completed
+2025-07-31 01:17:01,841 - INFO - ✅ Initial data collection completed
+2025-07-31 01:17:01,845 - INFO - ⏰ Data collection scheduler started
+2025-07-31 01:17:46,832 - INFO - 🛑 Shutdown requested for Data Manager
+2025-07-31 01:17:46,887 - INFO - ⏰ Data collection scheduler stopped
+2025-07-31 01:18:01,982 - INFO - 🛑 Data Manager stopped
+2025-07-31 01:18:01,983 - INFO - 🔄 Cleaning up Data Manager...
+2025-07-31 01:18:02,073 - INFO - ✅ Data Manager cleanup completed
+2025-07-31 01:25:15,755 - INFO - ✅ Loaded calendar scraper: FixedEconomicCalendarScraper
+2025-07-31 01:25:16,310 - INFO - ✅ Loaded sentiment scraper: SentimentSignalManager
+2025-07-31 01:25:16,310 - INFO - ✅ Loaded correlation scraper: CorrelationSignalManager
+2025-07-31 01:25:16,310 - INFO - ✅ Loaded cot scraper: COTDataManager
+2025-07-31 01:25:16,310 - INFO - ✅ Initialized 4 scrapers
+2025-07-31 01:25:16,310 - INFO - 📅 Calendar updates: every 60 minutes
+2025-07-31 01:25:16,310 - INFO - 😊 Sentiment updates: every 30 minutes
+2025-07-31 01:25:16,310 - INFO - 🔗 Correlation updates: every 30 minutes
+2025-07-31 01:25:16,310 - INFO - 📊 COT updates: friday at 18:00
+2025-07-31 01:25:16,319 - INFO - ✅ Data collection schedules initialized
+2025-07-31 01:25:16,319 - INFO - 🎯 Data Manager initialized
+2025-07-31 01:25:16,327 - INFO - 🚀 Data Manager starting...
+2025-07-31 01:25:16,358 - INFO - 📁 Loaded existing market data file
+2025-07-31 01:25:16,358 - INFO - 🔄 Running initial data collection...
+2025-07-31 01:25:16,358 - INFO - 🔄 Running initial economic_calendar collection...
+2025-07-31 01:25:16,358 - INFO - 📅 Updating economic calendar data...
+2025-07-31 01:25:16,358 - INFO - 🔄 Running initial sentiment collection...
+2025-07-31 01:25:16,358 - INFO - 🔄 Running initial correlation collection...
+2025-07-31 01:25:16,358 - INFO - 😊 Updating sentiment data...
+2025-07-31 01:25:16,358 - INFO - 🔗 Updating correlation data...
+2025-07-31 01:25:18,200 - INFO - ✅ Calendar updated: 190 events for 3 dates
+2025-07-31 01:25:18,360 - INFO - ✅ Initial economic_calendar collection completed
+2025-07-31 01:25:18,608 - INFO - ✅ Sentiment updated: 72 pairs processed
+2025-07-31 01:25:18,608 - INFO - ✅ Initial sentiment collection completed
+2025-07-31 01:25:18,664 - INFO - ✅ Correlation updated: 71 currencies, 228 warnings
+2025-07-31 01:25:18,665 - INFO - ✅ Initial correlation collection completed
+2025-07-31 01:25:18,665 - INFO - ✅ Initial data collection completed
+2025-07-31 01:25:18,665 - INFO - ⏰ Data collection scheduler started
+2025-07-31 01:27:02,562 - INFO - 🛑 Shutdown requested for Data Manager
+2025-07-31 01:27:02,736 - INFO - ⏰ Data collection scheduler stopped
+2025-07-31 01:27:18,835 - INFO - 🛑 Data Manager stopped
+2025-07-31 01:27:18,835 - INFO - 🔄 Cleaning up Data Manager...
+2025-07-31 01:27:18,871 - INFO - ✅ Data Manager cleanup completed
+2025-07-31 01:28:10,926 - INFO - ✅ Loaded calendar scraper: FixedEconomicCalendarScraper
+2025-07-31 01:28:11,252 - INFO - ✅ Loaded sentiment scraper: SentimentSignalManager
+2025-07-31 01:28:11,252 - INFO - ✅ Loaded correlation scraper: CorrelationSignalManager
+2025-07-31 01:28:11,255 - INFO - ✅ Loaded cot scraper: COTDataManager
+2025-07-31 01:28:11,256 - INFO - ✅ Initialized 4 scrapers
+2025-07-31 01:28:11,256 - INFO - 📅 Calendar updates: every 3 minutes
+2025-07-31 01:28:11,256 - INFO - 😊 Sentiment updates: every 2 minutes
+2025-07-31 01:28:11,256 - INFO - 🔗 Correlation updates: every 2 minutes
+2025-07-31 01:28:11,256 - INFO - 📊 COT updates: friday at 18:00
+2025-07-31 01:28:11,256 - INFO - ✅ Data collection schedules initialized
+2025-07-31 01:28:11,256 - INFO - 🎯 Data Manager initialized
+2025-07-31 01:28:11,265 - INFO - 🚀 Data Manager starting...
+2025-07-31 01:28:11,300 - INFO - 📁 Loaded existing market data file
+2025-07-31 01:28:11,300 - INFO - 🔄 Running initial data collection...
+2025-07-31 01:28:11,300 - INFO - 🔄 Running initial economic_calendar collection...
+2025-07-31 01:28:11,300 - INFO - 🔄 Running initial sentiment collection...
+2025-07-31 01:28:11,300 - INFO - 📅 Updating economic calendar data...
+2025-07-31 01:28:11,300 - INFO - 🔄 Running initial correlation collection...
+2025-07-31 01:28:11,300 - INFO - 😊 Updating sentiment data...
+2025-07-31 01:28:11,300 - INFO - 🔗 Updating correlation data...
+2025-07-31 01:28:12,663 - INFO - ✅ Correlation updated: 71 currencies, 228 warnings
+2025-07-31 01:28:12,665 - INFO - ✅ Initial correlation collection completed
+2025-07-31 01:28:13,131 - INFO - ✅ Calendar updated: 190 events for 3 dates
+2025-07-31 01:28:13,131 - INFO - ✅ Initial economic_calendar collection completed
+2025-07-31 01:28:13,178 - INFO - ✅ Sentiment updated: 72 pairs processed
+2025-07-31 01:28:13,178 - INFO - ✅ Initial sentiment collection completed
+2025-07-31 01:28:13,178 - INFO - ✅ Initial data collection completed
+2025-07-31 01:28:13,178 - INFO - ⏰ Data collection scheduler started
+2025-07-31 01:28:17,027 - INFO - 🛑 Shutdown requested for Data Manager
+2025-07-31 01:28:17,187 - INFO - ⏰ Data collection scheduler stopped
+2025-07-31 01:28:43,238 - INFO - 🛑 Data Manager stopped
+2025-07-31 01:28:48,151 - INFO - ✅ Loaded calendar scraper: FixedEconomicCalendarScraper
+2025-07-31 01:28:48,451 - INFO - ✅ Loaded sentiment scraper: SentimentSignalManager
+2025-07-31 01:28:48,457 - INFO - ✅ Loaded correlation scraper: CorrelationSignalManager
+2025-07-31 01:28:48,457 - INFO - ✅ Loaded cot scraper: COTDataManager
+2025-07-31 01:28:48,457 - INFO - ✅ Initialized 4 scrapers
+2025-07-31 01:28:48,457 - INFO - 📅 Calendar updates: every 60 minutes
+2025-07-31 01:28:48,457 - INFO - 😊 Sentiment updates: every 30 minutes
+2025-07-31 01:28:48,457 - INFO - 🔗 Correlation updates: every 30 minutes
+2025-07-31 01:28:48,457 - INFO - 📊 COT updates: friday at 18:00
+2025-07-31 01:28:48,460 - INFO - ✅ Data collection schedules initialized
+2025-07-31 01:28:48,460 - INFO - 🎯 Data Manager initialized
+2025-07-31 01:28:48,467 - INFO - 🔥 Forcing update of all data sources...
+2025-07-31 01:28:48,467 - INFO - 📅 Updating economic calendar data...
+2025-07-31 01:28:50,058 - INFO - ✅ Calendar updated: 190 events for 3 dates
+2025-07-31 01:28:50,058 - INFO - 😊 Updating sentiment data...
+2025-07-31 01:28:51,803 - INFO - ✅ Sentiment updated: 72 pairs processed
+2025-07-31 01:28:51,803 - INFO - 🔗 Updating correlation data...
+2025-07-31 01:28:52,851 - INFO - ✅ Correlation updated: 71 currencies, 228 warnings
+2025-07-31 01:28:52,857 - INFO - 📊 Updating COT data...
+2025-07-31 01:29:08,888 - ERROR - ❌ Error updating COT: name 'pd' is not defined
+2025-07-31 01:29:08,888 - INFO - ✅ Force update completed: 4/4 sources updated
+2025-07-31 01:29:38,176 - INFO - ✅ Loaded calendar scraper: FixedEconomicCalendarScraper
+2025-07-31 01:29:38,489 - INFO - ✅ Loaded sentiment scraper: SentimentSignalManager
+2025-07-31 01:29:38,490 - INFO - ✅ Loaded correlation scraper: CorrelationSignalManager
+2025-07-31 01:29:38,490 - INFO - ✅ Loaded cot scraper: COTDataManager
+2025-07-31 01:29:38,490 - INFO - ✅ Initialized 4 scrapers
+2025-07-31 01:29:38,490 - INFO - 📅 Calendar updates: every 10 minutes
+2025-07-31 01:29:38,490 - INFO - 😊 Sentiment updates: every 5 minutes
+2025-07-31 01:29:38,490 - INFO - 🔗 Correlation updates: every 5 minutes
+2025-07-31 01:29:38,494 - INFO - 📊 COT updates: friday at 18:00
+2025-07-31 01:29:38,494 - INFO - ✅ Data collection schedules initialized
+2025-07-31 01:29:38,494 - INFO - 🎯 Data Manager initialized
+2025-07-31 01:29:38,502 - INFO - 🚀 Data Manager starting...
+2025-07-31 01:29:38,519 - INFO - 📁 Loaded existing market data file
+2025-07-31 01:29:38,520 - INFO - 🔄 Running initial data collection...
+2025-07-31 01:29:38,521 - INFO - 🔄 Running initial economic_calendar collection...
+2025-07-31 01:29:38,521 - INFO - 📅 Updating economic calendar data...
+2025-07-31 01:29:38,521 - INFO - 🔄 Running initial sentiment collection...
+2025-07-31 01:29:38,521 - INFO - 🔄 Running initial correlation collection...
+2025-07-31 01:29:38,521 - INFO - 🔗 Updating correlation data...
+2025-07-31 01:29:38,521 - INFO - 😊 Updating sentiment data...
+2025-07-31 01:29:39,687 - INFO - ✅ Correlation updated: 71 currencies, 228 warnings
+2025-07-31 01:29:39,687 - INFO - ✅ Initial correlation collection completed
+2025-07-31 01:29:39,701 - INFO - ✅ Sentiment updated: 72 pairs processed
+2025-07-31 01:29:39,701 - INFO - ✅ Initial sentiment collection completed
+2025-07-31 01:29:40,305 - INFO - ✅ Calendar updated: 190 events for 3 dates
+2025-07-31 01:29:40,307 - INFO - ✅ Initial economic_calendar collection completed
+2025-07-31 01:29:40,307 - INFO - ✅ Initial data collection completed
+2025-07-31 01:29:40,307 - INFO - ⏰ Data collection scheduler started
+2025-07-31 01:30:10,430 - INFO - 📊 System Status: GOOD
+2025-07-31 01:30:10,430 - INFO -    ✅ Fresh: economic_calendar, sentiment, correlation
+2025-07-31 01:30:10,430 - INFO -    ⚠️ Stale: cot
+2025-07-31 01:30:10,430 - INFO -    📊 economic_calendar: fresh - 0m ago (190 events)
+2025-07-31 01:30:10,430 - INFO -    📊 sentiment: fresh - 0m ago (72 pairs)
+2025-07-31 01:30:10,430 - INFO -    📊 correlation: fresh - 1m ago (71 currencies, 228 warnings)
+2025-07-31 01:30:10,430 - INFO -    📊 cot: waiting - never (0 records)
+2025-07-31 01:30:40,509 - INFO - 📊 System Status: GOOD
+2025-07-31 01:30:40,509 - INFO -    ✅ Fresh: economic_calendar, sentiment, correlation
+2025-07-31 01:30:40,509 - INFO -    ⚠️ Stale: cot
+2025-07-31 01:30:40,510 - INFO -    📊 economic_calendar: fresh - 1m ago (190 events)
+2025-07-31 01:30:40,510 - INFO -    📊 sentiment: fresh - 1m ago (72 pairs)
+2025-07-31 01:30:40,510 - INFO -    📊 correlation: fresh - 1m ago (71 currencies, 228 warnings)
+2025-07-31 01:30:40,510 - INFO -    📊 cot: waiting - never (0 records)
+2025-07-31 01:34:39,460 - INFO - 😊 Updating sentiment data...
+2025-07-31 01:34:41,019 - INFO - ✅ Sentiment updated: 72 pairs processed
+2025-07-31 01:34:41,019 - INFO - 🔗 Updating correlation data...
+2025-07-31 01:34:41,978 - INFO - ✅ Correlation updated: 71 currencies, 228 warnings
+2025-07-31 01:38:26,306 - INFO - 🛑 Shutdown requested for Data Manager
+2025-07-31 01:38:27,103 - INFO - ⏰ Data collection scheduler stopped
+2025-07-31 01:38:41,301 - INFO - 🛑 Data Manager stopped
+2025-07-31 01:38:41,301 - INFO - 🔄 Cleaning up Data Manager...
+2025-07-31 01:38:41,345 - INFO - ✅ Data Manager cleanup completed
+2025-07-31 01:38:44,250 - INFO - ✅ Loaded calendar scraper: FixedEconomicCalendarScraper
+2025-07-31 01:38:44,614 - INFO - ✅ Loaded sentiment scraper: SentimentSignalManager
+2025-07-31 01:38:44,614 - INFO - ✅ Loaded correlation scraper: CorrelationSignalManager
+2025-07-31 01:38:44,614 - INFO - ✅ Loaded cot scraper: COTDataManager
+2025-07-31 01:38:44,614 - INFO - ✅ Initialized 4 scrapers
+2025-07-31 01:38:44,614 - INFO - 📅 Calendar updates: every 60 minutes
+2025-07-31 01:38:44,614 - INFO - 😊 Sentiment updates: every 30 minutes
+2025-07-31 01:38:44,614 - INFO - 🔗 Correlation updates: every 30 minutes
+2025-07-31 01:38:44,614 - INFO - 📊 COT updates: friday at 18:00
+2025-07-31 01:38:44,614 - INFO - ✅ Data collection schedules initialized
+2025-07-31 01:38:44,614 - INFO - 🎯 Data Manager initialized
+2025-07-31 01:38:44,624 - INFO - 🔥 Forcing update of all data sources...
+2025-07-31 01:38:44,624 - INFO - 📅 Updating economic calendar data...
+2025-07-31 01:38:45,869 - INFO - ✅ Calendar updated: 190 events for 3 dates
+2025-07-31 01:38:45,869 - INFO - 😊 Updating sentiment data...
+2025-07-31 01:38:46,968 - INFO - ✅ Sentiment updated: 72 pairs processed
+2025-07-31 01:38:46,968 - INFO - 🔗 Updating correlation data...
+2025-07-31 01:38:48,246 - INFO - ✅ Correlation updated: 71 currencies, 228 warnings
+2025-07-31 01:38:48,256 - INFO - 📊 Updating COT data...
+2025-07-31 01:39:03,676 - ERROR - ❌ Error updating COT: name 'pd' is not defined
+2025-07-31 01:39:03,676 - INFO - ✅ Force update completed: 4/4 sources updated
+2025-07-31 01:40:49,955 - INFO - ✅ Loaded calendar scraper: FixedEconomicCalendarScraper
+2025-07-31 01:40:49,957 - INFO - ✅ Loaded sentiment scraper: SentimentSignalManager
+2025-07-31 01:40:49,957 - INFO - ✅ Loaded correlation scraper: CorrelationSignalManager
+2025-07-31 01:40:49,959 - INFO - ✅ Loaded cot scraper: COTDataManager
+2025-07-31 01:40:49,959 - INFO - ✅ Initialized 4 scrapers
+2025-07-31 01:40:49,959 - INFO - 📅 Calendar updates: every 60 minutes
+2025-07-31 01:40:49,959 - INFO - 😊 Sentiment updates: every 30 minutes
+2025-07-31 01:40:49,961 - INFO - 🔗 Correlation updates: every 30 minutes
+2025-07-31 01:40:49,961 - INFO - 📊 COT updates: friday at 18:00
+2025-07-31 01:40:49,961 - INFO - ✅ Data collection schedules initialized
+2025-07-31 01:40:49,961 - INFO - 🎯 Data Manager initialized
+2025-07-31 01:40:49,968 - INFO - 🔥 Forcing update of all data sources...
+2025-07-31 01:40:49,970 - INFO - 📅 Updating economic calendar data...
+2025-07-31 01:40:51,882 - INFO - ✅ Calendar updated: 190 events for 3 dates
+2025-07-31 01:40:51,882 - INFO - 😊 Updating sentiment data...
+2025-07-31 01:40:54,842 - INFO - ✅ Sentiment updated: 72 pairs processed
+2025-07-31 01:40:54,852 - INFO - 🔗 Updating correlation data...
+2025-07-31 01:40:56,094 - INFO - ✅ Correlation updated: 71 currencies, 228 warnings
+2025-07-31 01:40:56,094 - INFO - 📊 Updating COT data...
+2025-07-31 01:41:11,317 - INFO - ✅ COT updated: 45 financial + 35 commodity records
+2025-07-31 01:41:11,318 - INFO - ✅ Force update completed: 4/4 sources updated

@@ -12,7 +12,7 @@
     "timeout": 30
   },
   "trading": {
-    "enabled": true,
+    "enabled": false,
     "max_positions_per_pair": 1,
     "emergency_stop_enabled": true,
     "risk_management": {
@@ -40,7 +40,7 @@
     "data_retention_days": 30
   },
   "testing": {
-    "reduce_intervals": false,
+    "reduce_intervals": true,
     "sentiment_test_interval": 5,
     "correlation_test_interval": 5,
     "calendar_test_interval": 10,

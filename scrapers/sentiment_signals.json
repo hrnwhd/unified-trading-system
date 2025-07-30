@@ -1,0 +1,1726 @@
+{
+  "timestamp": "2025-07-31T00:58:22.992621",
+  "data_source": "MyFXBook",
+  "threshold_used": 60,
+  "pairs": {
+    "EURUSD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 23,
+        "long": 77
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "1.14036",
+      "popularity": "44%",
+      "volume_data": {
+        "short": "6438.80 lots",
+        "long": "21988.60 lots"
+      },
+      "position_data": {
+        "short": "21593",
+        "long": "50975"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:22.992621"
+    },
+    "GBPUSD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 34,
+        "long": 66
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "1.32380",
+      "popularity": "28%",
+      "volume_data": {
+        "short": "4208.03 lots",
+        "long": "8037.62 lots"
+      },
+      "position_data": {
+        "short": "15204",
+        "long": "25986"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:22.999381"
+    },
+    "USDJPY": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 53,
+        "long": 47
+      },
+      "signal_strength": "Balanced",
+      "current_price": "149.522",
+      "popularity": "14%",
+      "volume_data": {
+        "short": "1189.61 lots",
+        "long": "1046.81 lots"
+      },
+      "position_data": {
+        "short": "4673",
+        "long": "5495"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:22.999381"
+    },
+    "GBPJPY": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 64,
+        "long": 36
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "197.934",
+      "popularity": "6%",
+      "volume_data": {
+        "short": "474.93 lots",
+        "long": "269.90 lots"
+      },
+      "position_data": {
+        "short": "2306",
+        "long": "1817"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:22.999381"
+    },
+    "USDCAD": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 77,
+        "long": 23
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "1.38295",
+      "popularity": "17%",
+      "volume_data": {
+        "short": "3395.93 lots",
+        "long": "1014.97 lots"
+      },
+      "position_data": {
+        "short": "12906",
+        "long": "3913"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:22.999381"
+    },
+    "EURAUD": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 62,
+        "long": 38
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "1.77249",
+      "popularity": "7%",
+      "volume_data": {
+        "short": "974.93 lots",
+        "long": "587.07 lots"
+      },
+      "position_data": {
+        "short": "3848",
+        "long": "2530"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:22.999381"
+    },
+    "EURJPY": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 66,
+        "long": 34
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "170.503",
+      "popularity": "8%",
+      "volume_data": {
+        "short": "1413.16 lots",
+        "long": "742.62 lots"
+      },
+      "position_data": {
+        "short": "3919",
+        "long": "3774"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:22.999381"
+    },
+    "AUDCAD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 27,
+        "long": 73
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "0.88958",
+      "popularity": "34%",
+      "volume_data": {
+        "short": "2376.07 lots",
+        "long": "6288.77 lots"
+      },
+      "position_data": {
+        "short": "11493",
+        "long": "30662"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:22.999381"
+    },
+    "AUDJPY": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 54,
+        "long": 46
+      },
+      "signal_strength": "Balanced",
+      "current_price": "96.187",
+      "popularity": "3%",
+      "volume_data": {
+        "short": "201.29 lots",
+        "long": "173.96 lots"
+      },
+      "position_data": {
+        "short": "995",
+        "long": "1200"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:22.999381"
+    },
+    "AUDNZD": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 41,
+        "long": 59
+      },
+      "signal_strength": "Balanced",
+      "current_price": "1.09116",
+      "popularity": "23%",
+      "volume_data": {
+        "short": "2539.11 lots",
+        "long": "3592.12 lots"
+      },
+      "position_data": {
+        "short": "9860",
+        "long": "11008"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.005001"
+    },
+    "AUDUSD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 22,
+        "long": 78
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "0.64330",
+      "popularity": "18%",
+      "volume_data": {
+        "short": "916.31 lots",
+        "long": "3194.76 lots"
+      },
+      "position_data": {
+        "short": "3598",
+        "long": "11680"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.005001"
+    },
+    "CADJPY": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 60,
+        "long": 40
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "108.106",
+      "popularity": "2%",
+      "volume_data": {
+        "short": "116.04 lots",
+        "long": "77.62 lots"
+      },
+      "position_data": {
+        "short": "900",
+        "long": "744"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.005001"
+    },
+    "EURCAD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 21,
+        "long": 79
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "1.57683",
+      "popularity": "8%",
+      "volume_data": {
+        "short": "314.98 lots",
+        "long": "1176.58 lots"
+      },
+      "position_data": {
+        "short": "2183",
+        "long": "5177"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.005001"
+    },
+    "EURCHF": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 18,
+        "long": 82
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "0.92946",
+      "popularity": "9%",
+      "volume_data": {
+        "short": "160.08 lots",
+        "long": "717.36 lots"
+      },
+      "position_data": {
+        "short": "949",
+        "long": "5386"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.005001"
+    },
+    "EURCZK": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 100,
+        "long": 0
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "24.59053",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.01 lots",
+        "long": "0.00 lots"
+      },
+      "position_data": {
+        "short": "1",
+        "long": "0"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.005001"
+    },
+    "EURGBP": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 62,
+        "long": 38
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "0.86132",
+      "popularity": "18%",
+      "volume_data": {
+        "short": "1852.74 lots",
+        "long": "1149.93 lots"
+      },
+      "position_data": {
+        "short": "7753",
+        "long": "7418"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.005001"
+    },
+    "EURHUF": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 50,
+        "long": 50
+      },
+      "signal_strength": "Balanced",
+      "current_price": "399.93",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "8.09 lots",
+        "long": "8.20 lots"
+      },
+      "position_data": {
+        "short": "38",
+        "long": "41"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.008612"
+    },
+    "EURNOK": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 21,
+        "long": 79
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "11.7756",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.22 lots",
+        "long": "0.85 lots"
+      },
+      "position_data": {
+        "short": "5",
+        "long": "10"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.008612"
+    },
+    "EURNZD": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 53,
+        "long": 47
+      },
+      "signal_strength": "Balanced",
+      "current_price": "1.93458",
+      "popularity": "5%",
+      "volume_data": {
+        "short": "263.52 lots",
+        "long": "232.27 lots"
+      },
+      "position_data": {
+        "short": "2146",
+        "long": "1290"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.013307"
+    },
+    "EURPLN": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 62,
+        "long": 38
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "4.27240",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.49 lots",
+        "long": "0.30 lots"
+      },
+      "position_data": {
+        "short": "23",
+        "long": "6"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.013307"
+    },
+    "EURSEK": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 57,
+        "long": 43
+      },
+      "signal_strength": "Balanced",
+      "current_price": "11.1650",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.13 lots",
+        "long": "0.10 lots"
+      },
+      "position_data": {
+        "short": "2",
+        "long": "1"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.013307"
+    },
+    "EURTRY": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 50,
+        "long": 50
+      },
+      "signal_strength": "Balanced",
+      "current_price": "46.29575",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.59 lots",
+        "long": "0.60 lots"
+      },
+      "position_data": {
+        "short": "19",
+        "long": "2"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.013307"
+    },
+    "GBPCAD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 33,
+        "long": 67
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "1.83062",
+      "popularity": "4%",
+      "volume_data": {
+        "short": "222.10 lots",
+        "long": "456.32 lots"
+      },
+      "position_data": {
+        "short": "1059",
+        "long": "1458"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.013307"
+    },
+    "GBPCHF": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 14,
+        "long": 86
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "1.07872",
+      "popularity": "6%",
+      "volume_data": {
+        "short": "84.29 lots",
+        "long": "535.60 lots"
+      },
+      "position_data": {
+        "short": "1063",
+        "long": "3284"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.013307"
+    },
+    "NZDCAD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 32,
+        "long": 68
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "0.81493",
+      "popularity": "20%",
+      "volume_data": {
+        "short": "778.59 lots",
+        "long": "1684.54 lots"
+      },
+      "position_data": {
+        "short": "3271",
+        "long": "11845"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.017610"
+    },
+    "NZDJPY": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 54,
+        "long": 46
+      },
+      "signal_strength": "Balanced",
+      "current_price": "88.098",
+      "popularity": "3%",
+      "volume_data": {
+        "short": "193.43 lots",
+        "long": "165.25 lots"
+      },
+      "position_data": {
+        "short": "666",
+        "long": "1392"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.017610"
+    },
+    "NZDUSD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 8,
+        "long": 92
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "0.58946",
+      "popularity": "18%",
+      "volume_data": {
+        "short": "409.86 lots",
+        "long": "4458.26 lots"
+      },
+      "position_data": {
+        "short": "1929",
+        "long": "13732"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.017610"
+    },
+    "USDCHF": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 36,
+        "long": 64
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "0.81484",
+      "popularity": "12%",
+      "volume_data": {
+        "short": "1057.35 lots",
+        "long": "1845.89 lots"
+      },
+      "position_data": {
+        "short": "4886",
+        "long": "6306"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.017610"
+    },
+    "USDCZK": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 50,
+        "long": 50
+      },
+      "signal_strength": "Balanced",
+      "current_price": "21.56128",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "1.42 lots",
+        "long": "1.44 lots"
+      },
+      "position_data": {
+        "short": "7",
+        "long": "22"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.017610"
+    },
+    "USDHUF": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 11,
+        "long": 89
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "350.72",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "1.02 lots",
+        "long": "8.55 lots"
+      },
+      "position_data": {
+        "short": "21",
+        "long": "114"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.017610"
+    },
+    "USDMXN": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 46,
+        "long": 54
+      },
+      "signal_strength": "Balanced",
+      "current_price": "18.8767",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "5.44 lots",
+        "long": "6.48 lots"
+      },
+      "position_data": {
+        "short": "66",
+        "long": "55"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.017610"
+    },
+    "USDNOK": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 33,
+        "long": 67
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "10.32263",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.18 lots",
+        "long": "0.37 lots"
+      },
+      "position_data": {
+        "short": "9",
+        "long": "18"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.017610"
+    },
+    "USDPLN": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 39,
+        "long": 61
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "3.74512",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.78 lots",
+        "long": "1.22 lots"
+      },
+      "position_data": {
+        "short": "7",
+        "long": "33"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.017610"
+    },
+    "USDSEK": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 10,
+        "long": 90
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "9.7892",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.10 lots",
+        "long": "0.94 lots"
+      },
+      "position_data": {
+        "short": "4",
+        "long": "28"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.022034"
+    },
+    "USDSGD": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 59,
+        "long": 41
+      },
+      "signal_strength": "Balanced",
+      "current_price": "1.29635",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "20.29 lots",
+        "long": "13.86 lots"
+      },
+      "position_data": {
+        "short": "198",
+        "long": "118"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.022034"
+    },
+    "USDTHB": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 6,
+        "long": 94
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "32.72563",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.02 lots",
+        "long": "0.29 lots"
+      },
+      "position_data": {
+        "short": "2",
+        "long": "11"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.022034"
+    },
+    "USDTRY": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 0,
+        "long": 100
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "40.57650",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.00 lots",
+        "long": "1.40 lots"
+      },
+      "position_data": {
+        "short": "0",
+        "long": "5"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.022034"
+    },
+    "USDZAR": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 41,
+        "long": 59
+      },
+      "signal_strength": "Balanced",
+      "current_price": "17.99881",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.83 lots",
+        "long": "1.19 lots"
+      },
+      "position_data": {
+        "short": "31",
+        "long": "55"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.022034"
+    },
+    "CHFJPY": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 81,
+        "long": 19
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "183.410",
+      "popularity": "6%",
+      "volume_data": {
+        "short": "692.25 lots",
+        "long": "166.87 lots"
+      },
+      "position_data": {
+        "short": "4794",
+        "long": "1175"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.024282"
+    },
+    "AUDCHF": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 22,
+        "long": 78
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "0.52417",
+      "popularity": "5%",
+      "volume_data": {
+        "short": "113.74 lots",
+        "long": "409.55 lots"
+      },
+      "position_data": {
+        "short": "1184",
+        "long": "2964"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.024282"
+    },
+    "GBPNZD": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 52,
+        "long": 48
+      },
+      "signal_strength": "Balanced",
+      "current_price": "2.24530",
+      "popularity": "2%",
+      "volume_data": {
+        "short": "100.23 lots",
+        "long": "93.21 lots"
+      },
+      "position_data": {
+        "short": "969",
+        "long": "862"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.024282"
+    },
+    "NZDCHF": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 19,
+        "long": 81
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "0.48022",
+      "popularity": "5%",
+      "volume_data": {
+        "short": "100.12 lots",
+        "long": "434.69 lots"
+      },
+      "position_data": {
+        "short": "849",
+        "long": "3144"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.024282"
+    },
+    "XAGUSD": {
+      "allowed_directions": [
+        "short",
+        "long"
+      ],
+      "blocked_directions": [],
+      "sentiment": {
+        "short": 42,
+        "long": 58
+      },
+      "signal_strength": "Balanced",
+      "current_price": "37.12",
+      "popularity": "2%",
+      "volume_data": {
+        "short": "447.07 lots",
+        "long": "619.57 lots"
+      },
+      "position_data": {
+        "short": "1025",
+        "long": "1809"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.024282"
+    },
+    "XAUUSD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 29,
+        "long": 71
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "3,275.23",
+      "popularity": "31%",
+      "volume_data": {
+        "short": "2165.58 lots",
+        "long": "5190.49 lots"
+      },
+      "position_data": {
+        "short": "8496",
+        "long": "24800"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.024282"
+    },
+    "CADCHF": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 20,
+        "long": 80
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "0.58914",
+      "popularity": "8%",
+      "volume_data": {
+        "short": "280.61 lots",
+        "long": "1115.53 lots"
+      },
+      "position_data": {
+        "short": "1644",
+        "long": "7143"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.024282"
+    },
+    "GBPAUD": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 81,
+        "long": 19
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "2.05759",
+      "popularity": "4%",
+      "volume_data": {
+        "short": "605.89 lots",
+        "long": "138.54 lots"
+      },
+      "position_data": {
+        "short": "1956",
+        "long": "858"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "SGDJPY": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 8,
+        "long": 92
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "115.206",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.37 lots",
+        "long": "4.16 lots"
+      },
+      "position_data": {
+        "short": "5",
+        "long": "13"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "GBPNOK": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 30,
+        "long": 70
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "13.66076",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.03 lots",
+        "long": "0.07 lots"
+      },
+      "position_data": {
+        "short": "2",
+        "long": "7"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "EURZAR": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 97,
+        "long": 3
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "20.52022",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "1.28 lots",
+        "long": "0.04 lots"
+      },
+      "position_data": {
+        "short": "58",
+        "long": "2"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "AUDSGD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 16,
+        "long": 84
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "0.83384",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "1.85 lots",
+        "long": "9.38 lots"
+      },
+      "position_data": {
+        "short": "107",
+        "long": "124"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "GBPSEK": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 39,
+        "long": 61
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "12.95685",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.35 lots",
+        "long": "0.54 lots"
+      },
+      "position_data": {
+        "short": "3",
+        "long": "11"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "CHFSGD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 35,
+        "long": 65
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "1.59018",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "1.42 lots",
+        "long": "2.66 lots"
+      },
+      "position_data": {
+        "short": "56",
+        "long": "21"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "EURSGD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 38,
+        "long": 62
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "1.47814",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "108.98 lots",
+        "long": "178.02 lots"
+      },
+      "position_data": {
+        "short": "230",
+        "long": "422"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "GBPSGD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 15,
+        "long": 85
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "1.71587",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.91 lots",
+        "long": "5.03 lots"
+      },
+      "position_data": {
+        "short": "16",
+        "long": "55"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "XAUGBP": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 14,
+        "long": 86
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "2,473.91",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.10 lots",
+        "long": "0.64 lots"
+      },
+      "position_data": {
+        "short": "6",
+        "long": "24"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "NOKJPY": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 0,
+        "long": 100
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "14.462",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.00 lots",
+        "long": "0.02 lots"
+      },
+      "position_data": {
+        "short": "0",
+        "long": "1"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "ZARJPY": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 1,
+        "long": 99
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "8.294",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.01 lots",
+        "long": "1.46 lots"
+      },
+      "position_data": {
+        "short": "1",
+        "long": "23"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "GBPTRY": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 100,
+        "long": 0
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "53.72584",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.40 lots",
+        "long": "0.00 lots"
+      },
+      "position_data": {
+        "short": "2",
+        "long": "0"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "USDRUB": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 0,
+        "long": 100
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "77.73241",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.00 lots",
+        "long": "1.00 lots"
+      },
+      "position_data": {
+        "short": "0",
+        "long": "1"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "SEKJPY": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 91,
+        "long": 9
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "15.225",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.10 lots",
+        "long": "0.01 lots"
+      },
+      "position_data": {
+        "short": "2",
+        "long": "1"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "EURMXN": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 96,
+        "long": 4
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "21.5225",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "3.80 lots",
+        "long": "0.15 lots"
+      },
+      "position_data": {
+        "short": "120",
+        "long": "5"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "XAUAUD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 0,
+        "long": 100
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "5,090.56",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.02 lots",
+        "long": "12.72 lots"
+      },
+      "position_data": {
+        "short": "1",
+        "long": "13"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "XAUEUR": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 80,
+        "long": 20
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "2,872.06",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "3.24 lots",
+        "long": "0.79 lots"
+      },
+      "position_data": {
+        "short": "18",
+        "long": "35"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.029717"
+    },
+    "XAUJPY": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 2,
+        "long": 98
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "489,671",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.04 lots",
+        "long": "1.78 lots"
+      },
+      "position_data": {
+        "short": "1",
+        "long": "130"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.038230"
+    },
+    "XAUCHF": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 11,
+        "long": 89
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "1,770.70",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.02 lots",
+        "long": "0.16 lots"
+      },
+      "position_data": {
+        "short": "1",
+        "long": "1"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.038230"
+    },
+    "GBPMXN": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 0,
+        "long": 100
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "24.9830",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.00 lots",
+        "long": "0.04 lots"
+      },
+      "position_data": {
+        "short": "0",
+        "long": "2"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.038230"
+    },
+    "XAGAUD": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 100,
+        "long": 0
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "57.699",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.20 lots",
+        "long": "0.00 lots"
+      },
+      "position_data": {
+        "short": "13",
+        "long": "0"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.038230"
+    },
+    "NOKSEK": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 3,
+        "long": 97
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "0.9472",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.03 lots",
+        "long": "0.86 lots"
+      },
+      "position_data": {
+        "short": "2",
+        "long": "86"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.040003"
+    },
+    "XAGEUR": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 10,
+        "long": 90
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "32.551",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.15 lots",
+        "long": "1.37 lots"
+      },
+      "position_data": {
+        "short": "9",
+        "long": "16"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.040003"
+    },
+    "XPTUSD": {
+      "allowed_directions": [
+        "short"
+      ],
+      "blocked_directions": [
+        "long"
+      ],
+      "sentiment": {
+        "short": 99,
+        "long": 1
+      },
+      "signal_strength": "Strong Short",
+      "current_price": "1,310.96",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "26.85 lots",
+        "long": "0.34 lots"
+      },
+      "position_data": {
+        "short": "49",
+        "long": "11"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.040003"
+    },
+    "XPDUSD": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 34,
+        "long": 66
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "1,212.95",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "0.27 lots",
+        "long": "0.53 lots"
+      },
+      "position_data": {
+        "short": "1",
+        "long": "18"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.040003"
+    },
+    "USDCNH": {
+      "allowed_directions": [
+        "long"
+      ],
+      "blocked_directions": [
+        "short"
+      ],
+      "sentiment": {
+        "short": 33,
+        "long": 67
+      },
+      "signal_strength": "Strong Long",
+      "current_price": "7.2116",
+      "popularity": "0%",
+      "volume_data": {
+        "short": "4.27 lots",
+        "long": "8.48 lots"
+      },
+      "position_data": {
+        "short": "23",
+        "long": "24"
+      },
+      "analysis_timestamp": "2025-07-31T00:58:23.040003"
+    }
+  },
+  "file_info": {
+    "version": "1.0",
+    "created_by": "sentiment_manager.py",
+    "data_freshness_limit_minutes": 60
+  }
+}

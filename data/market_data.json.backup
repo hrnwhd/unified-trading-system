@@ -6,7 +6,7 @@
     "account_number": 42903786,
     "magic_number": 50515253
   },
-  "last_updated": "2025-07-31T01:41:11.275684",
+  "last_updated": "2025-07-31T01:40:56.041075",
   "system_status": "stopped",
   "data_freshness": {
     "economic_calendar": {
@@ -25,9 +25,9 @@
       "age_minutes": 0
     },
     "cot": {
-      "fresh": true,
-      "last_update": "2025-07-31T01:41:11.275684",
-      "age_minutes": 0
+      "fresh": false,
+      "last_update": null,
+      "age_minutes": null
     }
   },
   "data_sources": {
@@ -8791,16 +8791,12 @@
       "error": null
     },
     "cot": {
-      "status": "fresh",
-      "last_update": "2025-07-31T01:41:11.275684",
-      "financial": {
-        "record_count": 45
-      },
-      "commodity": {
-        "record_count": 35
-      },
-      "records_count": 80,
-      "error": null
+      "status": "waiting",
+      "next_update": null,
+      "financial": {},
+      "commodity": {},
+      "error": null,
+      "records_count": 0
     }
   },
   "trading_signals": {

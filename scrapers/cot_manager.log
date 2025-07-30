@@ -1,0 +1,93 @@
+2025-07-31 00:57:26,239 - COT_MANAGER - INFO - ============================================================
+2025-07-31 00:57:26,239 - COT_MANAGER - INFO - COT DATA MANAGER STARTED
+2025-07-31 00:57:26,239 - COT_MANAGER - INFO - ============================================================
+2025-07-31 00:57:26,239 - COT_MANAGER - INFO - Historical weeks: 6
+2025-07-31 00:57:26,239 - COT_MANAGER - INFO - Output files: cot_consolidated_data.csv, cot_consolidated_data.json
+2025-07-31 00:57:26,239 - COT_MANAGER - INFO - ============================================================
+2025-07-31 00:57:26,239 - COT_MANAGER - INFO - 🚀 Starting COT data update...
+2025-07-31 00:57:26,239 - COT_MANAGER - INFO - 📅 Generated 6 Tuesday dates: ['2025-7-29', '2025-7-22', '2025-7-15', '2025-7-8', '2025-7-1', '2025-6-24']
+2025-07-31 00:57:26,239 - COT_MANAGER - INFO - 🔄 Processing date: 2025-7-29
+2025-07-31 00:57:26,239 - COT_MANAGER - INFO - 🔄 Scraping COT page: https://www.myfxbook.com/commitments-of-traders/historical-view/2025-7-29
+2025-07-31 00:57:26,870 - COT_MANAGER - WARNING - ⚠️ Section 'Financial Futures' not found for 2025-7-29
+2025-07-31 00:57:26,870 - COT_MANAGER - WARNING - ⚠️ Section 'Commodity Futures' not found for 2025-7-29
+2025-07-31 00:57:26,870 - COT_MANAGER - WARNING - ⚠️ No data found for 2025-7-29
+2025-07-31 00:57:28,877 - COT_MANAGER - INFO - 🔄 Processing date: 2025-7-22
+2025-07-31 00:57:28,877 - COT_MANAGER - INFO - 🔄 Scraping COT page: https://www.myfxbook.com/commitments-of-traders/historical-view/2025-7-22
+2025-07-31 00:57:29,505 - COT_MANAGER - INFO - ✅ Extracted 9 rows from 'Financial Futures' table for 2025-7-22
+2025-07-31 00:57:29,505 - COT_MANAGER - INFO - ✅ Extracted 7 rows from 'Commodity Futures' table for 2025-7-22
+2025-07-31 00:57:29,505 - COT_MANAGER - INFO - ✅ Extracted data for 2025-7-22
+2025-07-31 00:57:29,505 - COT_MANAGER - INFO -    Financial: 9 rows
+2025-07-31 00:57:29,505 - COT_MANAGER - INFO -    Commodity: 7 rows
+2025-07-31 00:57:31,519 - COT_MANAGER - INFO - 🔄 Processing date: 2025-7-15
+2025-07-31 00:57:31,519 - COT_MANAGER - INFO - 🔄 Scraping COT page: https://www.myfxbook.com/commitments-of-traders/historical-view/2025-7-15
+2025-07-31 00:57:32,003 - COT_MANAGER - INFO - ✅ Extracted 9 rows from 'Financial Futures' table for 2025-7-15
+2025-07-31 00:57:32,014 - COT_MANAGER - INFO - ✅ Extracted 7 rows from 'Commodity Futures' table for 2025-7-15
+2025-07-31 00:57:32,014 - COT_MANAGER - INFO - ✅ Extracted data for 2025-7-15
+2025-07-31 00:57:32,014 - COT_MANAGER - INFO -    Financial: 9 rows
+2025-07-31 00:57:32,014 - COT_MANAGER - INFO -    Commodity: 7 rows
+2025-07-31 00:57:34,017 - COT_MANAGER - INFO - 🔄 Processing date: 2025-7-8
+2025-07-31 00:57:34,018 - COT_MANAGER - INFO - 🔄 Scraping COT page: https://www.myfxbook.com/commitments-of-traders/historical-view/2025-7-8
+2025-07-31 00:57:34,356 - COT_MANAGER - INFO - ✅ Extracted 9 rows from 'Financial Futures' table for 2025-7-8
+2025-07-31 00:57:34,365 - COT_MANAGER - INFO - ✅ Extracted 7 rows from 'Commodity Futures' table for 2025-7-8
+2025-07-31 00:57:34,365 - COT_MANAGER - INFO - ✅ Extracted data for 2025-7-8
+2025-07-31 00:57:34,365 - COT_MANAGER - INFO -    Financial: 9 rows
+2025-07-31 00:57:34,365 - COT_MANAGER - INFO -    Commodity: 7 rows
+2025-07-31 00:57:36,371 - COT_MANAGER - INFO - 🔄 Processing date: 2025-7-1
+2025-07-31 00:57:36,371 - COT_MANAGER - INFO - 🔄 Scraping COT page: https://www.myfxbook.com/commitments-of-traders/historical-view/2025-7-1
+2025-07-31 00:57:36,902 - COT_MANAGER - INFO - ✅ Extracted 9 rows from 'Financial Futures' table for 2025-7-1
+2025-07-31 00:57:36,913 - COT_MANAGER - INFO - ✅ Extracted 7 rows from 'Commodity Futures' table for 2025-7-1
+2025-07-31 00:57:36,913 - COT_MANAGER - INFO - ✅ Extracted data for 2025-7-1
+2025-07-31 00:57:36,913 - COT_MANAGER - INFO -    Financial: 9 rows
+2025-07-31 00:57:36,913 - COT_MANAGER - INFO -    Commodity: 7 rows
+2025-07-31 00:57:38,918 - COT_MANAGER - INFO - 🔄 Processing date: 2025-6-24
+2025-07-31 00:57:38,918 - COT_MANAGER - INFO - 🔄 Scraping COT page: https://www.myfxbook.com/commitments-of-traders/historical-view/2025-6-24
+2025-07-31 00:57:39,328 - COT_MANAGER - INFO - ✅ Extracted 9 rows from 'Financial Futures' table for 2025-6-24
+2025-07-31 00:57:39,335 - COT_MANAGER - INFO - ✅ Extracted 7 rows from 'Commodity Futures' table for 2025-6-24
+2025-07-31 00:57:39,335 - COT_MANAGER - INFO - ✅ Extracted data for 2025-6-24
+2025-07-31 00:57:39,335 - COT_MANAGER - INFO -    Financial: 9 rows
+2025-07-31 00:57:39,335 - COT_MANAGER - INFO -    Commodity: 7 rows
+2025-07-31 00:57:41,343 - COT_MANAGER - INFO - 📊 Collected data: 5 Financial, 5 Commodity datasets
+2025-07-31 00:57:41,424 - COT_MANAGER - INFO - ✅ Standardized Financial dataframe: 9 rows, 17 columns
+2025-07-31 00:57:41,450 - COT_MANAGER - INFO - ✅ Standardized Financial dataframe: 9 rows, 17 columns
+2025-07-31 00:57:41,481 - COT_MANAGER - INFO - ✅ Standardized Financial dataframe: 9 rows, 17 columns
+2025-07-31 00:57:41,507 - COT_MANAGER - INFO - ✅ Standardized Financial dataframe: 9 rows, 17 columns
+2025-07-31 00:57:41,520 - COT_MANAGER - INFO - ✅ Standardized Financial dataframe: 9 rows, 17 columns
+2025-07-31 00:57:41,583 - COT_MANAGER - INFO - ✅ Standardized Commodity dataframe: 7 rows, 17 columns
+2025-07-31 00:57:41,614 - COT_MANAGER - INFO - ✅ Standardized Commodity dataframe: 7 rows, 17 columns
+2025-07-31 00:57:41,647 - COT_MANAGER - INFO - ✅ Standardized Commodity dataframe: 7 rows, 17 columns
+2025-07-31 00:57:41,675 - COT_MANAGER - INFO - ✅ Standardized Commodity dataframe: 7 rows, 17 columns
+2025-07-31 00:57:41,694 - COT_MANAGER - INFO - ✅ Standardized Commodity dataframe: 7 rows, 17 columns
+2025-07-31 00:57:41,710 - COT_MANAGER - INFO - ✅ Consolidated data:
+2025-07-31 00:57:41,710 - COT_MANAGER - INFO -    Financial: 45 records
+2025-07-31 00:57:41,710 - COT_MANAGER - INFO -    Commodity: 35 records
+2025-07-31 00:57:41,710 - COT_MANAGER - INFO - ✅ Added calculated fields for Financial data
+2025-07-31 00:57:41,725 - COT_MANAGER - INFO - ✅ Added calculated fields for Commodity data
+2025-07-31 00:57:41,773 - COT_MANAGER - INFO - 💾 Saved Financial CSV: cot_financial_data.csv
+2025-07-31 00:57:41,783 - COT_MANAGER - INFO - 💾 Saved Commodity CSV: cot_commodity_data.csv
+2025-07-31 00:57:46,728 - COT_MANAGER - INFO - 💾 Saved Excel with worksheets: cot_consolidated_data.xlsx
+2025-07-31 00:57:46,794 - COT_MANAGER - INFO - 💾 Saved JSON: cot_consolidated_data.json
+2025-07-31 00:57:46,794 - COT_MANAGER - INFO - ✅ COT data update completed successfully
+2025-07-31 00:57:46,794 - COT_MANAGER - INFO - 📊 COT DATA SUMMARY:
+2025-07-31 00:57:46,794 - COT_MANAGER - INFO -    === FINANCIAL DATA ===
+2025-07-31 00:57:46,794 - COT_MANAGER - INFO -    Records: 45
+2025-07-31 00:57:46,794 - COT_MANAGER - INFO -    Date range: 2025-06-24 to 2025-07-22
+2025-07-31 00:57:46,794 - COT_MANAGER - INFO -    Latest data (2025-07-22):
+2025-07-31 00:57:46,794 - COT_MANAGER - INFO -      📉 AUDUSD: -81,255 net
+2025-07-31 00:57:46,807 - COT_MANAGER - INFO -      📈 USDBRL: 25,857 net
+2025-07-31 00:57:46,810 - COT_MANAGER - INFO -      📉 USDCAD: -70,343 net
+2025-07-31 00:57:46,810 - COT_MANAGER - INFO -      📉 USDCHF: -26,065 net
+2025-07-31 00:57:46,810 - COT_MANAGER - INFO -      📈 EURUSD: 125,515 net
+2025-07-31 00:57:46,810 - COT_MANAGER - INFO -    Instruments (9): AUD, BRL, CAD, CHF, EUR, GBP, JPY, MXN, NZD
+2025-07-31 00:57:46,810 - COT_MANAGER - INFO -    === COMMODITY DATA ===
+2025-07-31 00:57:46,810 - COT_MANAGER - INFO -    Records: 35
+2025-07-31 00:57:46,815 - COT_MANAGER - INFO -    Date range: 2025-06-24 to 2025-07-22
+2025-07-31 00:57:46,815 - COT_MANAGER - INFO -    Latest data (2025-07-22):
+2025-07-31 00:57:46,815 - COT_MANAGER - INFO -      📉 ALUMINUM: -2,591 net
+2025-07-31 00:57:46,815 - COT_MANAGER - INFO -      📈 COPPER: 39,822 net
+2025-07-31 00:57:46,822 - COT_MANAGER - INFO -      📈 USOIL: 25,991 net
+2025-07-31 00:57:46,822 - COT_MANAGER - INFO -      📈 XAUUSD: 253,038 net
+2025-07-31 00:57:46,826 - COT_MANAGER - INFO -      📉 XPDUSD: -2,300 net
+2025-07-31 00:57:46,826 - COT_MANAGER - INFO -    Instruments (7): Aluminium, Copper, Crude Oil, Gold, Palladium, Platinum, Silver
+2025-07-31 00:57:46,858 - COT_MANAGER - INFO - 📖 Loaded 45 Financial COT records
+2025-07-31 00:57:46,902 - COT_MANAGER - INFO - 📖 Loaded 35 Commodity COT records
+2025-07-31 00:57:46,913 - COT_MANAGER - INFO - ✅ Update completed: COT Data - Financial: 45 records, 9 instruments, Commodity: 35 records, 7 instruments, Latest: 2025-07-22 (9 days old)
