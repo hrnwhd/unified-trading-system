@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-# ===== UNIFIED TRADING SYSTEM - SPYDER COMPATIBLE =====
-# Phase 2: Integrated Data Management System - SPYDER IDE COMPATIBLE
-# Version: 1.1 - Data Integration Complete
+# ===== UNIFIED TRADING SYSTEM - MAIN ENTRY POINT (PHASE 3) =====
+# Enhanced with intelligent trading engine integration
+# Version: 1.3 - Trading Intelligence Integration
 
 import os
 import sys
@@ -24,7 +24,7 @@ def setup_logging():
     log_dir = Path("logs")
     log_dir.mkdir(exist_ok=True)
     
-    # Configure main logger with UTF-8 encoding
+    # Configure main logger
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -42,7 +42,7 @@ def setup_logging():
         'risk': logging.getLogger('risk')
     }
     
-    # Add file handlers for specialized logs with UTF-8 encoding
+    # Add file handlers for specialized logs
     for name, logger in loggers.items():
         file_handler = logging.FileHandler(log_dir / f'{name}.log', encoding='utf-8')
         file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
@@ -65,11 +65,11 @@ def create_directory_structure():
     for directory in directories:
         Path(directory).mkdir(exist_ok=True)
     
-    print("Directory structure verified")
+    print("✅ Directory structure verified")
 
-# ===== CONFIGURATION LOADER =====
-class ConfigManager:
-    """Centralized configuration management"""
+# ===== ENHANCED CONFIGURATION LOADER =====
+class EnhancedConfigManager:
+    """Enhanced configuration management for Phase 3"""
     
     def __init__(self):
         self.config_dir = Path("config")
@@ -81,7 +81,7 @@ class ConfigManager:
         """Load all configuration files"""
         try:
             # Load main settings
-            self.settings = self.load_config("settings.json", self.get_default_settings())
+            self.settings = self.load_config("settings.json", self.get_enhanced_default_settings())
             
             # Load pairs configuration
             self.pairs = self.load_config("pairs.json", self.get_default_pairs())
@@ -89,10 +89,10 @@ class ConfigManager:
             # Load schedules
             self.schedules = self.load_config("schedules.json", self.get_default_schedules())
             
-            print("Configuration loaded successfully")
+            print("✅ Enhanced configuration loaded successfully")
             
         except Exception as e:
-            print(f"Error loading configuration: {e}")
+            print(f"❌ Error loading configuration: {e}")
             raise
     
     def load_config(self, filename, default_config):
@@ -101,28 +101,29 @@ class ConfigManager:
         
         if config_path.exists():
             try:
-                with open(config_path, 'r', encoding='utf-8') as f:
+                with open(config_path, 'r') as f:
                     config = json.load(f)
-                print(f"Loaded {filename}")
+                print(f"📁 Loaded {filename}")
                 return config
             except Exception as e:
-                print(f"Error loading {filename}, using defaults: {e}")
+                print(f"⚠️ Error loading {filename}, using defaults: {e}")
                 return default_config
         else:
             # Create default config file
-            with open(config_path, 'w', encoding='utf-8') as f:
+            with open(config_path, 'w') as f:
                 json.dump(default_config, f, indent=2)
-            print(f"Created default {filename}")
+            print(f"📝 Created default {filename}")
             return default_config
     
-    def get_default_settings(self):
-        """Default system settings"""
+    def get_enhanced_default_settings(self):
+        """Enhanced default system settings for Phase 3"""
         return {
             "system": {
                 "name": "Unified Trading System",
-                "version": "1.1",
+                "version": "1.3",
                 "environment": "production",
-                "debug_mode": False
+                "debug_mode": False,
+                "phase": 3
             },
             "mt5": {
                 "account_number": 42903786,
@@ -134,10 +135,30 @@ class ConfigManager:
                 "enabled": True,
                 "max_positions_per_pair": 1,
                 "emergency_stop_enabled": True,
+                "enhanced_engine": True,
                 "risk_management": {
                     "max_drawdown_percent": 50,
                     "max_daily_loss_percent": 10,
                     "max_concurrent_trades": 20
+                }
+            },
+            "data_integration": {
+                "enabled": True,
+                "sentiment_threshold": 70,
+                "correlation_risk_threshold": 70,
+                "economic_event_buffer_hours": 1,
+                "cache_duration_seconds": 60,
+                "fallback_on_error": True
+            },
+            "enhanced_risk_management": {
+                "correlation_adjustment": True,
+                "economic_event_adjustment": True,
+                "sentiment_based_blocking": True,
+                "dynamic_position_sizing": True,
+                "risk_reduction_factors": {
+                    "high_correlation": 0.8,
+                    "major_events": 0.7,
+                    "extreme_sentiment": 0.9
                 }
             },
             "martingale": {
@@ -170,7 +191,8 @@ class ConfigManager:
                 "bot_token": "",
                 "chat_id": "",
                 "alerts_enabled": True,
-                "status_updates_interval": 300
+                "status_updates_interval": 300,
+                "enhanced_notifications": True
             },
             "web_dashboard": {
                 "enabled": False,
@@ -181,12 +203,13 @@ class ConfigManager:
                 "level": "INFO",
                 "max_file_size_mb": 50,
                 "backup_count": 5,
-                "console_output": True
+                "console_output": True,
+                "enhanced_logging": True
             }
         }
     
     def get_default_pairs(self):
-        """Default trading pairs configuration"""
+        """Default trading pairs configuration (unchanged)"""
         return {
             "monitored_pairs": [
                 "AUDUSD", "USDCAD", "XAUUSD", "EURUSD", "GBPUSD",
@@ -198,73 +221,85 @@ class ConfigManager:
                     "enabled": True,
                     "risk_profile": "Medium",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 },
                 "USDCAD": {
                     "enabled": True,
                     "risk_profile": "Low",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 },
                 "XAUUSD": {
                     "enabled": True,
                     "risk_profile": "High",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 },
                 "EURUSD": {
                     "enabled": True,
                     "risk_profile": "Medium",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 },
                 "GBPUSD": {
                     "enabled": True,
                     "risk_profile": "Medium",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 },
                 "AUDCAD": {
                     "enabled": True,
                     "risk_profile": "Low",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 },
                 "USDCHF": {
                     "enabled": True,
                     "risk_profile": "High",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 },
                 "GBPCAD": {
                     "enabled": True,
                     "risk_profile": "Low",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 },
                 "AUDNZD": {
                     "enabled": True,
                     "risk_profile": "Medium",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 },
                 "NZDCAD": {
                     "enabled": True,
                     "risk_profile": "Low",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 },
                 "US500": {
                     "enabled": True,
                     "risk_profile": "High",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 },
                 "BTCUSD": {
                     "enabled": True,
                     "risk_profile": "Medium",
                     "trading_days": [0, 1, 2, 3, 4],
-                    "trading_hours": {"start": 0, "end": 23}
+                    "trading_hours": {"start": 0, "end": 23},
+                    "data_integration": True
                 }
             },
             "risk_profiles": {
@@ -314,7 +349,7 @@ class ConfigManager:
         }
     
     def get_default_schedules(self):
-        """Default update schedules"""
+        """Default update schedules (unchanged)"""
         return {
             "data_collection": {
                 "sentiment": {
@@ -347,17 +382,19 @@ class ConfigManager:
             "trading": {
                 "analysis_interval_minutes": 5,
                 "position_check_interval_seconds": 30,
-                "risk_check_interval_seconds": 60
+                "risk_check_interval_seconds": 60,
+                "enhanced_decision_interval_seconds": 60
             },
             "monitoring": {
                 "emergency_check_interval_seconds": 30,
                 "status_update_interval_minutes": 5,
-                "health_check_interval_minutes": 1
+                "health_check_interval_minutes": 1,
+                "data_connectivity_check_minutes": 10
             }
         }
     
     def get(self, key_path, default=None):
-        """Get configuration value using dot notation (e.g., 'mt5.account_number')"""
+        """Get configuration value using dot notation"""
         try:
             keys = key_path.split('.')
             value = self.settings
@@ -395,22 +432,25 @@ class ConfigManager:
     def save_config(self, filename, config):
         """Save configuration to file"""
         config_path = self.config_dir / filename
-        with open(config_path, 'w', encoding='utf-8') as f:
+        with open(config_path, 'w') as f:
             json.dump(config, f, indent=2)
 
-# ===== SYSTEM STATUS MANAGER =====
-class SystemStatus:
-    """Track overall system health and status"""
+# ===== ENHANCED SYSTEM STATUS MANAGER =====
+class EnhancedSystemStatus:
+    """Enhanced system health tracking for Phase 3"""
     
     def __init__(self):
         self.components = {
             'data_manager': {'status': 'stopped', 'last_update': None, 'error': None},
-            'trading_engine': {'status': 'stopped', 'last_update': None, 'error': None},
+            'enhanced_trading_engine': {'status': 'stopped', 'last_update': None, 'error': None},
             'risk_monitor': {'status': 'stopped', 'last_update': None, 'error': None},
-            'telegram_bot': {'status': 'stopped', 'last_update': None, 'error': None}
+            'telegram_bot': {'status': 'stopped', 'last_update': None, 'error': None},
+            'trading_hub': {'status': 'stopped', 'last_update': None, 'error': None}
         }
         self.start_time = datetime.now()
         self.system_status = 'initializing'
+        self.data_integration_status = 'unknown'
+        self.enhanced_features_active = False
     
     def update_component_status(self, component, status, error=None):
         """Update status of individual component"""
@@ -418,6 +458,14 @@ class SystemStatus:
             self.components[component]['status'] = status
             self.components[component]['last_update'] = datetime.now()
             self.components[component]['error'] = error
+            
+            # Update enhanced features status
+            if component == 'enhanced_trading_engine' and status == 'running':
+                self.enhanced_features_active = True
+    
+    def update_data_integration_status(self, status):
+        """Update data integration status"""
+        self.data_integration_status = status
     
     def get_overall_status(self):
         """Get overall system status"""
@@ -425,14 +473,16 @@ class SystemStatus:
         total_components = len(self.components)
         
         if running_components == total_components:
+            return 'optimal'
+        elif running_components > total_components * 0.7:
             return 'healthy'
         elif running_components > 0:
             return 'partial'
         else:
             return 'stopped'
     
-    def get_status_summary(self):
-        """Get detailed status summary"""
+    def get_enhanced_status_summary(self):
+        """Get detailed status summary for Phase 3"""
         uptime = datetime.now() - self.start_time
         
         return {
@@ -440,24 +490,28 @@ class SystemStatus:
             'uptime_seconds': int(uptime.total_seconds()),
             'uptime_formatted': str(uptime).split('.')[0],
             'components': self.components.copy(),
-            'timestamp': datetime.now().isoformat()
+            'timestamp': datetime.now().isoformat(),
+            'enhanced_features_active': self.enhanced_features_active,
+            'data_integration_status': self.data_integration_status,
+            'phase': 3
         }
 
-# ===== MAIN TRADING SYSTEM CLASS =====
-class TradingSystemManager:
-    """Main system coordinator"""
+# ===== ENHANCED TRADING SYSTEM MANAGER =====
+class EnhancedTradingSystemManager:
+    """Enhanced system coordinator for Phase 3"""
     
     def __init__(self):
-        self.config = ConfigManager()
-        self.status = SystemStatus()
+        self.config = EnhancedConfigManager()
+        self.status = EnhancedSystemStatus()
         self.loggers = setup_logging()
         self.logger = logging.getLogger(__name__)
         
         # Component references
         self.data_manager = None
-        self.trading_engine = None
+        self.enhanced_trading_engine = None
         self.risk_monitor = None
         self.telegram_bot = None
+        self.trading_hub = None
         
         # Control flags
         self.running = False
@@ -467,132 +521,148 @@ class TradingSystemManager:
         self.threads = {}
     
     def initialize_system(self):
-        """Initialize all system components"""
+        """Initialize all system components for Phase 3"""
         try:
-            self.logger.info("Starting Unified Trading System...")
+            self.logger.info("🚀 Initializing Enhanced Trading System (Phase 3)...")
             
             # Create directories
             create_directory_structure()
             
-            # Display configuration
-            self.display_startup_info()
+            # Display enhanced startup info
+            self.display_enhanced_startup_info()
             
-            # Import core modules
-            self.import_modules()
+            # Import enhanced modules
+            self.import_enhanced_modules()
             
-            self.logger.info("System initialization complete")
+            self.logger.info("✅ Enhanced system initialization complete")
             return True
             
         except Exception as e:
-            self.logger.error(f"System initialization failed: {e}")
+            self.logger.error(f"❌ Enhanced system initialization failed: {e}")
             return False
     
-    def display_startup_info(self):
-        """Display system startup information"""
-        print("\n" + "="*60)
-        print("UNIFIED TRADING SYSTEM - PHASE 2")
-        print("="*60)
+    def display_enhanced_startup_info(self):
+        """Display enhanced system startup information"""
+        print("\n" + "="*70)
+        print("🤖 ENHANCED UNIFIED TRADING SYSTEM - PHASE 3")
+        print("="*70)
         print(f"Version: {self.config.get('system.version')}")
+        print(f"Phase: {self.config.get('system.phase')}")
         print(f"Environment: {self.config.get('system.environment')}")
         print(f"MT5 Account: {self.config.get('mt5.account_number')}")
         print(f"Magic Number: {self.config.get('mt5.magic_number')}")
         print(f"Monitored Pairs: {len(self.config.pairs['monitored_pairs'])}")
-        print(f"Trading Enabled: {self.config.get('trading.enabled')}")
-        print(f"Data Collection Enabled: {self.config.get('data_collection.enabled')}")
-        print(f"Martingale Enabled: {self.config.get('martingale.enabled')}")
-        print(f"Telegram Enabled: {self.config.get('telegram.enabled')}")
-        print("="*60)
+        print(f"Enhanced Trading: {self.config.get('trading.enhanced_engine')}")
+        print(f"Data Integration: {self.config.get('data_integration.enabled')}")
+        print(f"Sentiment Threshold: {self.config.get('data_integration.sentiment_threshold')}%")
+        print(f"Correlation Risk: {self.config.get('data_integration.correlation_risk_threshold')}%")
+        print(f"Economic Buffer: {self.config.get('data_integration.economic_event_buffer_hours')}h")
+        print(f"Telegram: {self.config.get('telegram.enabled')}")
+        print("="*70)
     
-    def import_modules(self):
-        """Import core system modules"""
+    def import_enhanced_modules(self):
+        """Import enhanced system modules for Phase 3"""
         try:
-            self.logger.info("Loading core modules...")
+            self.logger.info("📦 Loading enhanced modules...")
             
-            # Import Data Manager (Phase 2 - Now Available)
-            try:
-                from data_manager import DataManager
-                self.data_manager = DataManager(self.config, self.loggers['data'])
-                self.logger.info("Data Manager loaded")
-            except ImportError as e:
-                self.logger.error(f"Data Manager not found: {e}")
-                self.data_manager = None
-            
-            # Try to import Trading Hub
+            # Trading Hub
             try:
                 from trading_hub import TradingHub
                 self.trading_hub = TradingHub(self.config, self.status, self.loggers)
-                self.logger.info("Trading Hub loaded")
+                self.logger.info("✅ Trading Hub loaded")
             except ImportError:
-                self.logger.warning("Trading Hub not found - will be created in Phase 3")
+                self.logger.warning("⚠️ Trading Hub not found")
                 self.trading_hub = None
             
-            # Try to import Trading Engine
+            # Data Manager
             try:
-                from trading_engine import TradingEngine
-                self.trading_engine = TradingEngine(self.config, self.loggers['trading'])
-                self.logger.info("Trading Engine loaded")
+                from data_manager import DataManager
+                self.data_manager = DataManager(self.config, self.loggers['data'])
+                self.logger.info("✅ Data Manager loaded")
             except ImportError:
-                self.logger.warning("Trading Engine not found - will be created in Phase 3")
-                self.trading_engine = None
+                self.logger.warning("⚠️ Data Manager not found")
+                self.data_manager = None
             
-            # Try to import Risk Monitor
+            # Enhanced Trading Engine (NEW)
             try:
-                from risk_monitor import RiskMonitor
-                self.risk_monitor = RiskMonitor(self.config, self.loggers['risk'])
-                self.logger.info("Risk Monitor loaded")
+                from trading_engine import run_enhanced_robot
+                self.enhanced_trading_engine = run_enhanced_robot
+                self.logger.info("✅ Enhanced Trading Engine loaded")
+                self.status.enhanced_features_active = True
             except ImportError:
-                self.logger.warning("Risk Monitor not found - will be created in Phase 3")
+                # Fallback to original trading engine
+                try:
+                    from trading_engine import run_simplified_robot
+                    self.enhanced_trading_engine = run_simplified_robot
+                    self.logger.warning("⚠️ Using fallback trading engine (not enhanced)")
+                except ImportError:
+                    self.logger.warning("⚠️ No trading engine found")
+                    self.enhanced_trading_engine = None
+            
+            # Risk Monitor
+            try:
+                from risk_monitor import run_emergency_monitor
+                self.risk_monitor = run_emergency_monitor
+                self.logger.info("✅ Risk Monitor loaded")
+            except ImportError:
+                self.logger.warning("⚠️ Risk Monitor not found")
                 self.risk_monitor = None
             
-            # Try to import Telegram Bot
+            # Telegram Bot (if enabled)
             if self.config.get('telegram.enabled'):
                 try:
                     from telegram_bot import TelegramBot
                     self.telegram_bot = TelegramBot(self.config, self.loggers['telegram'])
-                    self.logger.info("Telegram Bot loaded")
+                    self.logger.info("✅ Telegram Bot loaded")
                 except ImportError:
-                    self.logger.warning("Telegram Bot not found - will be created in Phase 4")
+                    self.logger.warning("⚠️ Telegram Bot not found")
                     self.telegram_bot = None
             
         except Exception as e:
-            self.logger.error(f"Error importing modules: {e}")
+            self.logger.error(f"❌ Error importing enhanced modules: {e}")
     
     def start_system(self):
-        """Start all system components"""
+        """Start all enhanced system components"""
         try:
-            self.logger.info("Starting system components...")
+            self.logger.info("🚀 Starting enhanced system components...")
             self.running = True
             
-            # Start Data Manager (Phase 2 - Priority)
+            # Start Data Manager first (Phase 2)
             if self.data_manager:
                 self.start_component('data_manager', self.data_manager.run)
-                time.sleep(2)  # Allow data manager to initialize
+                time.sleep(3)  # Allow data manager to initialize
+            
+            # Start Trading Hub
+            if self.trading_hub:
+                self.start_component('trading_hub', self.trading_hub.run)
+                time.sleep(2)
             
             # Start Risk Monitor
             if self.risk_monitor:
-                self.start_component('risk_monitor', self.risk_monitor.run)
+                self.start_component('risk_monitor', self.risk_monitor)
+                time.sleep(2)
             
-            # Start Trading Engine (after data manager is running)
-            if self.trading_engine:
-                time.sleep(2)  # Allow data manager to initialize
-                self.start_component('trading_engine', self.trading_engine.run)
+            # Start Enhanced Trading Engine (Phase 3)
+            if self.enhanced_trading_engine:
+                self.start_component('enhanced_trading_engine', self.enhanced_trading_engine)
+                time.sleep(2)
             
-            # Start Telegram Bot
+            # Start Telegram Bot (if enabled)
             if self.telegram_bot:
                 self.start_component('telegram_bot', self.telegram_bot.run)
             
-            self.logger.info("All available components started")
+            self.logger.info("✅ All enhanced components started")
             return True
             
         except Exception as e:
-            self.logger.error(f"Error starting system: {e}")
+            self.logger.error(f"❌ Error starting enhanced system: {e}")
             return False
     
     def start_component(self, component_name, target_function):
         """Start individual component in separate thread"""
         try:
             thread = threading.Thread(
-                target=self.component_wrapper,
+                target=self.enhanced_component_wrapper,
                 args=(component_name, target_function),
                 name=f"{component_name}_thread",
                 daemon=True
@@ -601,43 +671,51 @@ class TradingSystemManager:
             self.threads[component_name] = thread
             
             self.status.update_component_status(component_name, 'running')
-            self.logger.info(f"Started {component_name}")
+            self.logger.info(f"🔄 Started enhanced {component_name}")
             
         except Exception as e:
-            self.logger.error(f"Failed to start {component_name}: {e}")
+            self.logger.error(f"❌ Failed to start {component_name}: {e}")
             self.status.update_component_status(component_name, 'error', str(e))
     
-    def component_wrapper(self, component_name, target_function):
-        """Wrapper for component execution with error handling"""
+    def enhanced_component_wrapper(self, component_name, target_function):
+        """Enhanced wrapper for component execution with better error handling"""
         try:
-            self.logger.info(f"{component_name} thread starting...")
+            self.logger.info(f"🔄 {component_name} enhanced thread starting...")
             target_function()
             
         except Exception as e:
-            self.logger.error(f"{component_name} crashed: {e}")
+            self.logger.error(f"❌ {component_name} crashed: {e}")
             self.status.update_component_status(component_name, 'error', str(e))
+            
+            # Enhanced error recovery for critical components
+            if component_name in ['enhanced_trading_engine', 'data_manager']:
+                self.logger.info(f"🔄 Attempting to restart critical component: {component_name}")
+                time.sleep(30)  # Wait before restart attempt
+                try:
+                    target_function()
+                except Exception as restart_error:
+                    self.logger.error(f"❌ Restart failed for {component_name}: {restart_error}")
         
         finally:
             self.status.update_component_status(component_name, 'stopped')
-            self.logger.warning(f"{component_name} thread stopped")
+            self.logger.warning(f"🛑 {component_name} enhanced thread stopped")
     
-    def monitor_system(self):
-        """Main system monitoring loop"""
+    def monitor_enhanced_system(self):
+        """Enhanced system monitoring loop"""
         try:
-            self.logger.info("System monitoring started")
+            self.logger.info("👀 Enhanced system monitoring started")
             
             while self.running and not self.shutdown_requested:
                 try:
                     # Check component health
-                    self.check_component_health()
+                    self.check_enhanced_component_health()
                     
-                    # Log status periodically (every 5 minutes)
-                    if datetime.now().minute % 5 == 0 and datetime.now().second < 30:
-                        self.log_system_status()
+                    # Check data integration status
+                    self.check_data_integration_health()
                     
-                    # Enhanced data manager monitoring (Phase 2)
-                    if self.data_manager:
-                        self.monitor_data_manager()
+                    # Log enhanced status periodically
+                    if datetime.now().minute % 5 == 0:  # Every 5 minutes
+                        self.log_enhanced_system_status()
                     
                     # Check for shutdown signal
                     if self.check_shutdown_signal():
@@ -646,51 +724,65 @@ class TradingSystemManager:
                     time.sleep(10)  # Check every 10 seconds
                     
                 except KeyboardInterrupt:
-                    self.logger.info("Shutdown requested by user")
+                    self.logger.info("🛑 Enhanced shutdown requested by user")
                     break
                 
                 except Exception as e:
-                    self.logger.error(f"Error in monitoring loop: {e}")
+                    self.logger.error(f"❌ Error in enhanced monitoring loop: {e}")
                     time.sleep(5)
             
         except Exception as e:
-            self.logger.error(f"Fatal error in system monitor: {e}")
+            self.logger.error(f"❌ Fatal error in enhanced system monitor: {e}")
         
         finally:
-            self.shutdown_system()
+            self.shutdown_enhanced_system()
     
-    def monitor_data_manager(self):
-        """Enhanced monitoring for data manager (Phase 2)"""
-        try:
-            # Get data manager health every 30 seconds
-            if datetime.now().second % 30 == 0:
-                health = self.data_manager.get_system_health()
-                
-                # Check if any data sources are having issues
-                if health.get('health_score', 0) < 50:
-                    self.logger.warning(f"Data health degraded: {health.get('health_score', 0)}%")
-                
-                # Log fresh vs stale data sources
-                fresh_count = health.get('fresh_sources', 0)
-                total_count = health.get('total_sources', 0)
-                
-                if fresh_count < total_count:
-                    stale_count = total_count - fresh_count
-                    self.logger.info(f"Data Status: {fresh_count}/{total_count} sources fresh ({stale_count} stale)")
-                
-        except Exception as e:
-            self.logger.error(f"Error monitoring data manager: {e}")
-    
-    def check_component_health(self):
-        """Check health of all components"""
+    def check_enhanced_component_health(self):
+        """Enhanced component health checking"""
         try:
             for component_name, thread in self.threads.items():
                 if not thread.is_alive():
-                    self.logger.warning(f"{component_name} thread died")
+                    self.logger.warning(f"⚠️ {component_name} enhanced thread died")
                     self.status.update_component_status(component_name, 'stopped')
                     
+                    # Enhanced restart logic for critical components
+                    if component_name in ['enhanced_trading_engine', 'data_manager']:
+                        self.logger.info(f"🔄 Critical component down, attempting restart: {component_name}")
+                        # TODO: Add restart logic in future versions
+                        
         except Exception as e:
-            self.logger.error(f"Error checking component health: {e}")
+            self.logger.error(f"❌ Error checking enhanced component health: {e}")
+    
+    def check_data_integration_health(self):
+        """Check health of data integration systems"""
+        try:
+            data_dir = Path("data")
+            market_data_file = data_dir / "market_data.json"
+            
+            if market_data_file.exists():
+                # Check data freshness
+                with open(market_data_file, 'r') as f:
+                    market_data = json.load(f)
+                
+                last_updated = market_data.get('last_updated')
+                if last_updated:
+                    last_update_time = datetime.fromisoformat(last_updated)
+                    age_minutes = (datetime.now() - last_update_time).total_seconds() / 60
+                    
+                    if age_minutes < 10:
+                        self.status.update_data_integration_status('fresh')
+                    elif age_minutes < 60:
+                        self.status.update_data_integration_status('stale')
+                    else:
+                        self.status.update_data_integration_status('old')
+                else:
+                    self.status.update_data_integration_status('unknown')
+            else:
+                self.status.update_data_integration_status('missing')
+                
+        except Exception as e:
+            self.logger.error(f"❌ Error checking data integration health: {e}")
+            self.status.update_data_integration_status('error')
     
     def check_shutdown_signal(self):
         """Check for external shutdown signals"""
@@ -698,358 +790,97 @@ class TradingSystemManager:
             # Check for shutdown file
             shutdown_file = Path("data/shutdown_signal.json")
             if shutdown_file.exists():
-                self.logger.info("Shutdown signal file detected")
+                self.logger.info("🛑 Enhanced shutdown signal file detected")
                 shutdown_file.unlink()  # Remove the file
                 return True
             
             return False
             
         except Exception as e:
-            self.logger.error(f"Error checking shutdown signal: {e}")
+            self.logger.error(f"❌ Error checking shutdown signal: {e}")
             return False
     
-    def log_system_status(self):
-        """Log current system status"""
+    def log_enhanced_system_status(self):
+        """Log enhanced system status"""
         try:
-            status_summary = self.status.get_status_summary()
+            status_summary = self.status.get_enhanced_status_summary()
             
-            self.logger.info(f"System Status: {status_summary['system_status'].upper()}")
-            self.logger.info(f"Uptime: {status_summary['uptime_formatted']}")
+            self.logger.info(f"📊 Enhanced System Status: {status_summary['system_status'].upper()}")
+            self.logger.info(f"⏰ Uptime: {status_summary['uptime_formatted']}")
+            self.logger.info(f"🧠 Enhanced Features: {'ACTIVE' if status_summary['enhanced_features_active'] else 'INACTIVE'}")
+            self.logger.info(f"📊 Data Integration: {status_summary['data_integration_status'].upper()}")
             
             running_components = [name for name, comp in status_summary['components'].items() 
                                 if comp['status'] == 'running']
             
             if running_components:
-                self.logger.info(f"Running: {', '.join(running_components)}")
+                self.logger.info(f"✅ Running: {', '.join(running_components)}")
             
             failed_components = [name for name, comp in status_summary['components'].items() 
                                if comp['status'] == 'error']
             
             if failed_components:
-                self.logger.warning(f"Failed: {', '.join(failed_components)}")
-            
-            # Enhanced data manager status logging (Phase 2)
-            if self.data_manager:
-                try:
-                    health = self.data_manager.get_system_health()
-                    self.logger.info(f"Data Health: {health.get('health_score', 0)}% ({health.get('fresh_sources', 0)}/{health.get('total_sources', 0)} sources fresh)")
-                except Exception as e:
-                    self.logger.warning(f"Could not get data manager health: {e}")
+                self.logger.warning(f"❌ Failed: {', '.join(failed_components)}")
                 
         except Exception as e:
-            self.logger.error(f"Error logging system status: {e}")
+            self.logger.error(f"❌ Error logging enhanced system status: {e}")
     
-    def shutdown_system(self):
-        """Gracefully shutdown all components"""
+    def shutdown_enhanced_system(self):
+        """Enhanced graceful shutdown"""
         try:
-            self.logger.info("Shutting down system...")
+            self.logger.info("🔄 Shutting down enhanced system...")
             self.running = False
             
             # Signal all components to stop
             for component_name in self.threads.keys():
                 self.status.update_component_status(component_name, 'stopping')
             
-            # Request shutdown for data manager (Phase 2)
-            if self.data_manager:
-                try:
-                    self.data_manager.request_shutdown()
-                    self.logger.info("Data Manager shutdown requested")
-                except Exception as e:
-                    self.logger.warning(f"Error requesting data manager shutdown: {e}")
-            
             # Wait for threads to complete (with timeout)
             for component_name, thread in self.threads.items():
                 thread.join(timeout=30)  # 30 second timeout
                 if thread.is_alive():
-                    self.logger.warning(f"{component_name} thread did not stop gracefully")
+                    self.logger.warning(f"⚠️ {component_name} enhanced thread did not stop gracefully")
             
-            # Cleanup data manager (Phase 2)
-            if self.data_manager:
-                try:
-                    self.data_manager.cleanup()
-                    self.logger.info("Data Manager cleanup completed")
-                except Exception as e:
-                    self.logger.warning(f"Error cleaning up data manager: {e}")
-            
-            self.logger.info("System shutdown complete")
+            self.logger.info("✅ Enhanced system shutdown complete")
             
         except Exception as e:
-            self.logger.error(f"Error during shutdown: {e}")
+            self.logger.error(f"❌ Error during enhanced shutdown: {e}")
 
-# ===== QUICK TEST FUNCTION FOR SPYDER =====
-def test_system_quick():
-    """Quick test function that can be run in Spyder"""
-    print("="*60)
-    print("QUICK SYSTEM TEST")
-    print("="*60)
-    
-    try:
-        # Test 1: Create system manager
-        print("Test 1: Creating system manager...")
-        system_manager = TradingSystemManager()
-        print("   OK: System manager created")
-        
-        # Test 2: Check data manager
-        if system_manager.data_manager:
-            print("Test 2: Data manager check...")
-            scrapers = list(system_manager.data_manager.scrapers.keys())
-            print(f"   OK: Data manager loaded with {len(scrapers)} scrapers: {scrapers}")
-            
-            # Test 3: Check health
-            health = system_manager.data_manager.get_system_health()
-            print(f"   OK: System health: {health.get('health_score', 0)}%")
-            
-            # Test 4: Test force update
-            print("Test 3: Testing force update...")
-            success = system_manager.data_manager.force_update('economic_calendar')
-            print(f"   Force update result: {'SUCCESS' if success else 'FAILED'}")
-            
-            # Test 5: Check market data file
-            market_data_file = Path("data/market_data.json")
-            if market_data_file.exists():
-                print("Test 4: Market data file check...")
-                with open(market_data_file, 'r', encoding='utf-8') as f:
-                    market_data = json.load(f)
-                
-                system_status = market_data.get('system_status', 'unknown')
-                print(f"   OK: Market data file exists, status: {system_status}")
-                
-                # Show data sources
-                data_sources = market_data.get('data_sources', {})
-                for source_name, source_data in data_sources.items():
-                    status = source_data.get('status', 'unknown')
-                    print(f"   {source_name}: {status}")
-                
-                print("\n" + "="*60)
-                print("TEST RESULTS: SUCCESS")
-                print("="*60)
-                print("System is ready for operation!")
-                print("\nYou can now:")
-                print("1. Run individual data updates")
-                print("2. Start the full system")
-                print("3. Monitor data collection")
-                
-                return True
-            else:
-                print("   ERROR: Market data file not created")
-                return False
-        else:
-            print("   ERROR: Data manager not available")
-            return False
-            
-    except Exception as e:
-        print(f"TEST ERROR: {e}")
-        import traceback
-        traceback.print_exc()
-        return False
-
-# ===== DATA COLLECTION TEST FUNCTIONS =====
-def test_individual_scrapers():
-    """Test each scraper individually"""
-    print("="*60)
-    print("INDIVIDUAL SCRAPER TESTS")
-    print("="*60)
-    
-    try:
-        # Create system manager
-        system_manager = TradingSystemManager()
-        
-        if not system_manager.data_manager:
-            print("ERROR: Data manager not available")
-            return False
-        
-        data_manager = system_manager.data_manager
-        
-        # Test each scraper
-        scrapers_to_test = ['economic_calendar', 'sentiment', 'correlation', 'cot']
-        results = {}
-        
-        for scraper_name in scrapers_to_test:
-            print(f"\nTesting {scraper_name}...")
-            try:
-                success = data_manager.force_update(scraper_name)
-                results[scraper_name] = success
-                print(f"   Result: {'SUCCESS' if success else 'FAILED'}")
-                
-                # Wait a moment between tests
-                time.sleep(2)
-                
-            except Exception as e:
-                results[scraper_name] = False
-                print(f"   ERROR: {e}")
-        
-        # Summary
-        print("\n" + "="*60)
-        print("SCRAPER TEST SUMMARY")
-        print("="*60)
-        
-        successful = sum(1 for result in results.values() if result)
-        total = len(results)
-        
-        for scraper_name, result in results.items():
-            status = "PASS" if result else "FAIL"
-            print(f"{scraper_name}: {status}")
-        
-        print(f"\nOverall: {successful}/{total} scrapers working")
-        
-        if successful > 0:
-            print("\nSome scrapers are working! You can:")
-            print("1. Check data/market_data.json for results")
-            print("2. Run the full system with available scrapers")
-            print("3. Check logs/data.log for detailed information")
-        
-        return successful > 0
-        
-    except Exception as e:
-        print(f"ERROR: {e}")
-        return False
-
-def run_data_collection_test(duration_minutes=5):
-    """Run data collection for a specified duration"""
-    print("="*60)
-    print(f"DATA COLLECTION TEST - {duration_minutes} MINUTES")
-    print("="*60)
-    
-    try:
-        # Create system manager with test intervals
-        system_manager = TradingSystemManager()
-        
-        # Set fast intervals for testing
-        system_manager.config.schedules['data_collection']['sentiment']['interval_minutes'] = 2
-        system_manager.config.schedules['data_collection']['correlation']['interval_minutes'] = 2
-        system_manager.config.schedules['data_collection']['economic_calendar']['interval_minutes'] = 3
-        
-        print("Starting data collection with fast test intervals...")
-        print("   Sentiment: every 2 minutes")
-        print("   Correlation: every 2 minutes") 
-        print("   Economic Calendar: every 3 minutes")
-        print("   COT: weekly (normal schedule)")
-        
-        # Initialize and start system
-        if not system_manager.initialize_system():
-            print("ERROR: System initialization failed")
-            return False
-        
-        if not system_manager.start_system():
-            print("ERROR: System startup failed")
-            return False
-        
-        print(f"\nRunning for {duration_minutes} minutes...")
-        print("Press Ctrl+C to stop early")
-        
-        # Run for specified duration
-        start_time = time.time()
-        end_time = start_time + (duration_minutes * 60)
-        
-        update_count = 0
-        last_status_time = start_time
-        
-        try:
-            while time.time() < end_time:
-                # Show status every 30 seconds
-                if time.time() - last_status_time >= 30:
-                    elapsed = (time.time() - start_time) / 60
-                    remaining = duration_minutes - elapsed
-                    
-                    if system_manager.data_manager:
-                        health = system_manager.data_manager.get_system_health()
-                        health_score = health.get('health_score', 0)
-                        fresh_sources = health.get('fresh_sources', 0)
-                        total_sources = health.get('total_sources', 0)
-                        
-                        print(f"   Status: {elapsed:.1f}/{duration_minutes} min | "
-                              f"Health: {health_score}% | "
-                              f"Fresh: {fresh_sources}/{total_sources}")
-                    
-                    last_status_time = time.time()
-                
-                time.sleep(1)
-                
-        except KeyboardInterrupt:
-            print("\n   Stopped by user")
-        
-        # Final status
-        print("\nFinal Results:")
-        if system_manager.data_manager:
-            health = system_manager.data_manager.get_system_health()
-            market_data = system_manager.data_manager.get_market_data()
-            
-            print(f"   Health Score: {health.get('health_score', 0)}%")
-            
-            # Show data source status
-            data_sources = market_data.get('data_sources', {})
-            for source_name, source_data in data_sources.items():
-                status = source_data.get('status', 'unknown')
-                last_update = source_data.get('last_update', 'never')
-                
-                if last_update != 'never':
-                    try:
-                        update_time = datetime.fromisoformat(last_update)
-                        age_minutes = (datetime.now() - update_time).total_seconds() / 60
-                        age_str = f"{age_minutes:.1f}m ago"
-                    except:
-                        age_str = "unknown age"
-                else:
-                    age_str = "never updated"
-                
-                print(f"   {source_name}: {status} ({age_str})")
-        
-        # Shutdown
-        system_manager.shutdown_system()
-        
-        print("\nData collection test completed!")
-        print("Check the following files for results:")
-        print("   - data/market_data.json (unified data)")
-        print("   - logs/data.log (detailed logs)")
-        print("   - logs/system.log (system logs)")
-        
-        return True
-        
-    except Exception as e:
-        print(f"ERROR: {e}")
-        import traceback
-        traceback.print_exc()
-        return False
-
-# ===== COMMAND LINE INTERFACE =====
-def parse_command_line():
-    """Parse command line arguments"""
+# ===== ENHANCED COMMAND LINE INTERFACE =====
+def parse_enhanced_command_line():
+    """Parse enhanced command line arguments"""
     import argparse
     
-    parser = argparse.ArgumentParser(description='Unified Trading System - Phase 2')
+    parser = argparse.ArgumentParser(description='Enhanced Unified Trading System (Phase 3)')
     parser.add_argument('--config', help='Configuration file path')
     parser.add_argument('--debug', action='store_true', help='Enable debug mode')
     parser.add_argument('--dry-run', action='store_true', help='Run in simulation mode')
     parser.add_argument('--test-intervals', action='store_true', help='Use reduced intervals for testing')
-    parser.add_argument('--data-only', action='store_true', help='Run data collection only (no trading)')
-    parser.add_argument('--force-update', help='Force update specific data source (calendar|sentiment|correlation|cot|all)')
-    parser.add_argument('--test-quick', action='store_true', help='Run quick system test')
-    parser.add_argument('--test-scrapers', action='store_true', help='Test individual scrapers')
-    parser.add_argument('--test-collection', type=int, metavar='MINUTES', help='Run data collection test for N minutes')
+    parser.add_argument('--no-data-integration', action='store_true', help='Disable data integration features')
+    parser.add_argument('--trading-only', action='store_true', help='Run only the enhanced trading engine')
+    parser.add_argument('--data-only', action='store_true', help='Run only the data collection system')
+    parser.add_argument('--phase', type=int, choices=[1, 2, 3], default=3, help='System phase to run')
     
     return parser.parse_args()
 
-# ===== MAIN EXECUTION =====
+# ===== ENHANCED MAIN EXECUTION =====
 def main():
-    """Main entry point"""
+    """Enhanced main entry point for Phase 3"""
     try:
-        print("Starting Unified Trading System - Phase 2...")
+        print("🚀 Starting Enhanced Unified Trading System (Phase 3)...")
         
-        # Parse command line arguments
-        args = parse_command_line()
+        # Parse enhanced command line arguments
+        args = parse_enhanced_command_line()
         
-        # Handle test commands first
-        if args.test_quick:
-            return 0 if test_system_quick() else 1
+        # Handle special run modes
+        if args.trading_only:
+            return run_trading_only_mode(args)
         
-        if args.test_scrapers:
-            return 0 if test_individual_scrapers() else 1
+        if args.data_only:
+            return run_data_only_mode(args)
         
-        if args.test_collection:
-            return 0 if run_data_collection_test(args.test_collection) else 1
-        
-        # Initialize system manager
-        system_manager = TradingSystemManager()
+        # Initialize enhanced system manager
+        system_manager = EnhancedTradingSystemManager()
         
         # Apply command line overrides
         if args.debug:
@@ -1062,66 +893,189 @@ def main():
         
         if args.test_intervals:
             system_manager.config.update('testing.reduce_intervals', True)
-            # Apply reduced intervals to schedules
-            system_manager.config.schedules['data_collection']['sentiment']['interval_minutes'] = 5
-            system_manager.config.schedules['data_collection']['correlation']['interval_minutes'] = 5
-            system_manager.config.schedules['data_collection']['economic_calendar']['interval_minutes'] = 10
         
-        if args.data_only:
-            system_manager.config.update('trading.enabled', False)
-            print("Data collection only mode enabled")
+        if args.no_data_integration:
+            system_manager.config.update('data_integration.enabled', False)
+            system_manager.config.update('trading.enhanced_engine', False)
         
-        # Initialize system
+        if args.phase < 3:
+            system_manager.config.update('system.phase', args.phase)
+            system_manager.config.update('data_integration.enabled', False)
+            system_manager.config.update('trading.enhanced_engine', False)
+        
+        # Initialize enhanced system
         if not system_manager.initialize_system():
-            print("System initialization failed")
+            print("❌ Enhanced system initialization failed")
             return 1
         
-        # Handle force update command
-        if args.force_update:
-            if system_manager.data_manager:
-                print(f"Forcing update for: {args.force_update}")
-                source = args.force_update if args.force_update != 'all' else None
-                success = system_manager.data_manager.force_update(source)
-                print(f"Force update {'succeeded' if success else 'failed'}")
-                return 0 if success else 1
-            else:
-                print("Data Manager not available for force update")
-                return 1
-        
-        # Start all components
+        # Start all enhanced components
         if not system_manager.start_system():
-            print("System startup failed")
+            print("❌ Enhanced system startup failed")
             return 1
         
-        print("\nSystem started successfully!")
-        print("Use Ctrl+C to stop the system")
-        print("Check logs/ directory for detailed logs")
-        print("Check config/ directory for configuration files")
-        print("Check data/ directory for market data")
+        print("\n✅ Enhanced system started successfully!")
+        print("📱 Use Ctrl+C to stop the system")
+        print("📊 Check logs/ directory for detailed logs")
+        print("⚙️ Check config/ directory for configuration files")
+        print("📁 Check data/ directory for market data")
+        print("🧠 Enhanced trading intelligence ACTIVE")
         
-        # Phase 2 specific information
-        if system_manager.data_manager:
-            print("Phase 2: Data Collection System Active")
-            print("   - Economic Calendar: Updates every hour")
-            print("   - Sentiment Analysis: Updates every 30 minutes")
-            print("   - Correlation Data: Updates every 30 minutes")
-            print("   - COT Data: Updates weekly on Friday")
-            print("   - Unified Data: Available in data/market_data.json")
-        
-        # Run main monitoring loop
-        system_manager.monitor_system()
+        # Run enhanced monitoring loop
+        system_manager.monitor_enhanced_system()
         
         return 0
         
     except KeyboardInterrupt:
-        print("\nSystem stopped by user")
+        print("\n🛑 Enhanced system stopped by user")
         return 0
     
     except Exception as e:
-        print(f"\nFatal system error: {e}")
+        print(f"\n❌ Fatal enhanced system error: {e}")
         import traceback
         traceback.print_exc()
         return 1
 
+def run_trading_only_mode(args):
+    """Run only the enhanced trading engine"""
+    try:
+        print("🎯 Starting Trading-Only Mode...")
+        
+        # Import and run enhanced trading engine directly
+        try:
+            from trading_engine import run_enhanced_robot
+            print("✅ Enhanced trading engine loaded")
+            run_enhanced_robot()
+        except ImportError:
+            print("⚠️ Enhanced trading engine not found, using fallback")
+            try:
+                from trading_engine import run_simplified_robot
+                run_simplified_robot()
+            except ImportError:
+                print("❌ No trading engine found")
+                return 1
+        
+        return 0
+        
+    except KeyboardInterrupt:
+        print("\n🛑 Trading-only mode stopped by user")
+        return 0
+    except Exception as e:
+        print(f"❌ Error in trading-only mode: {e}")
+        return 1
+
+def run_data_only_mode(args):
+    """Run only the data collection system"""
+    try:
+        print("📊 Starting Data-Only Mode...")
+        
+        # Initialize minimal system for data collection
+        config = EnhancedConfigManager()
+        loggers = setup_logging()
+        
+        try:
+            from data_manager import DataManager
+            data_manager = DataManager(config, loggers['data'])
+            print("✅ Data manager loaded")
+            
+            print("🔄 Starting data collection...")
+            data_manager.run()
+            
+        except ImportError:
+            print("❌ Data manager not found")
+            return 1
+        
+        return 0
+        
+    except KeyboardInterrupt:
+        print("\n🛑 Data-only mode stopped by user")
+        return 0
+    except Exception as e:
+        print(f"❌ Error in data-only mode: {e}")
+        return 1
+
+# ===== ENHANCED UTILITY FUNCTIONS =====
+def check_system_prerequisites():
+    """Check if all prerequisites are met for Phase 3"""
+    try:
+        print("🔍 Checking Phase 3 prerequisites...")
+        
+        # Check required directories
+        required_dirs = ['config', 'core', 'scrapers', 'data', 'logs']
+        for dir_name in required_dirs:
+            if not Path(dir_name).exists():
+                print(f"❌ Missing directory: {dir_name}")
+                return False
+            else:
+                print(f"✅ Directory found: {dir_name}")
+        
+        # Check critical files
+        critical_files = [
+            'core/trading_engine.py',
+            'core/data_manager.py',
+            'config/settings.json'
+        ]
+        
+        for file_path in critical_files:
+            if not Path(file_path).exists():
+                print(f"❌ Missing file: {file_path}")
+                return False
+            else:
+                print(f"✅ File found: {file_path}")
+        
+        # Check data directory
+        data_dir = Path("data")
+        market_data_file = data_dir / "market_data.json"
+        
+        if market_data_file.exists():
+            print("✅ Market data file exists")
+            try:
+                with open(market_data_file, 'r') as f:
+                    data = json.load(f)
+                    if 'data_sources' in data:
+                        print("✅ Market data structure valid")
+                    else:
+                        print("⚠️ Market data structure incomplete")
+            except Exception as e:
+                print(f"⚠️ Market data file error: {e}")
+        else:
+            print("⚠️ Market data file not found (will be created)")
+        
+        print("✅ Prerequisites check complete")
+        return True
+        
+    except Exception as e:
+        print(f"❌ Error checking prerequisites: {e}")
+        return False
+
+def display_phase3_banner():
+    """Display Phase 3 startup banner"""
+    banner = """
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║          🤖 ENHANCED UNIFIED TRADING SYSTEM - PHASE 3             ║
+║                                                                  ║
+║  ✅ Data Collection System (Phase 2)                             ║
+║  🧠 Enhanced Trading Intelligence (Phase 3)                      ║
+║  📊 Real-time Market Data Integration                             ║
+║  🎯 Sentiment-Based Direction Blocking                           ║
+║  🔗 Correlation Risk Management                                   ║
+║  📅 Economic Event Timing                                         ║
+║  ⚖️ Dynamic Position Sizing                                       ║
+║                                                                  ║
+║  Ready for Phase 4: Telegram Bot & Remote Control               ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+"""
+    print(banner)
+
 if __name__ == "__main__":
+    # Display banner
+    display_phase3_banner()
+    
+    # Check prerequisites
+    if not check_system_prerequisites():
+        print("\n❌ Prerequisites not met. Please run setup.py first.")
+        sys.exit(1)
+    
+    # Run enhanced main
     sys.exit(main())

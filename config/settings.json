@@ -1,9 +1,10 @@
 {
   "system": {
     "name": "Unified Trading System",
-    "version": "1.0",
+    "version": "1.3",
     "environment": "production",
-    "debug_mode": false
+    "debug_mode": false,
+    "phase": 3
   },
   "mt5": {
     "account_number": 42903786,
@@ -12,13 +13,33 @@
     "timeout": 30
   },
   "trading": {
-    "enabled": false,
+    "enabled": true,
+    "enhanced_engine": true,
     "max_positions_per_pair": 1,
     "emergency_stop_enabled": true,
     "risk_management": {
       "max_drawdown_percent": 50,
       "max_daily_loss_percent": 10,
       "max_concurrent_trades": 20
+    }
+  },
+  "data_integration": {
+    "enabled": true,
+    "sentiment_threshold": 70,
+    "correlation_risk_threshold": 70,
+    "economic_event_buffer_hours": 1,
+    "cache_duration_seconds": 60,
+    "fallback_on_error": true
+  },
+  "enhanced_risk_management": {
+    "correlation_adjustment": true,
+    "economic_event_adjustment": true,
+    "sentiment_based_blocking": true,
+    "dynamic_position_sizing": true,
+    "risk_reduction_factors": {
+      "high_correlation": 0.8,
+      "major_events": 0.7,
+      "extreme_sentiment": 0.9
     }
   },
   "martingale": {
@@ -40,7 +61,7 @@
     "data_retention_days": 30
   },
   "testing": {
-    "reduce_intervals": true,
+    "reduce_intervals": false,
     "sentiment_test_interval": 5,
     "correlation_test_interval": 5,
     "calendar_test_interval": 10,
@@ -51,7 +72,8 @@
     "bot_token": "",
     "chat_id": "",
     "alerts_enabled": true,
-    "status_updates_interval": 300
+    "status_updates_interval": 300,
+    "enhanced_notifications": true
   },
   "web_dashboard": {
     "enabled": false,
@@ -62,6 +84,7 @@
     "level": "INFO",
     "max_file_size_mb": 50,
     "backup_count": 5,
-    "console_output": true
+    "console_output": true,
+    "enhanced_logging": true
   }
 }
