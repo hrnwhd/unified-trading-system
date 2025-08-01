@@ -575,11 +575,26 @@ class EnhancedTradeManager:
     """Enhanced version preserving all your proven martingale logic"""
     
     def __init__(self):
+        # Add paths for imports
+        import sys
+        base_path = Path(__file__).parent
+        core_path = str(base_path / 'core')
+        if core_path not in sys.path:
+            sys.path.insert(0, core_path)
+        
         # Import your proven components
-        from core.trading_engine_backup import (
-            EnhancedTradeManager as OriginalTradeManager,
-            BotPersistence
-        )
+        try:
+            from trading_engine_backup import (
+                EnhancedTradeManager as OriginalTradeManager,
+                BotPersistence
+            )
+        except ImportError:
+            # Try alternative import path
+            sys.path.insert(0, str(base_path))
+            from core.trading_engine_backup import (
+                EnhancedTradeManager as OriginalTradeManager,
+                BotPersistence
+            )
         
         # Initialize with your proven base
         self.original_manager = OriginalTradeManager()
